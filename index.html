@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Harish | Mechanical Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Mechanical engineering portfolio: CAD, manufacturing, additive, robotics." />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --text: #e2e8f0;
+      --accent: #38bdf8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    header {
+      padding: 2.5rem 1.25rem 1rem;
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    nav a {
+      color: var(--text);
+      margin-left: 1rem;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .hero {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 2rem;
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3rem);
+      margin-bottom: 0.5rem;
+    }
+    .hero p {
+      max-width: 38rem;
+      margin-bottom: 1.5rem;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #0f172a;
+      padding: 0.6rem 1.05rem;
+      border-radius: 0.4rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    section {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 1rem;
+    }
+    h2 {
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+    }
+    .grid {
+      display: grid;
+      gap: 1rem;
+    }
+    @media(min-width: 800px){
+      .projects-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(226,232,240,0.04);
+      border-radius: 0.6rem;
+      padding: 1rem;
+    }
+    .tagline {
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
+    .project-title {
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+    footer {
+      max-width: 1080px;
+      margin: 2rem auto;
+      padding: 0 1.25rem 2rem;
+      font-size: 0.75rem;
+      color: #94a3b8;
+    }
+    a {
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div style="font-weight:700;">Harish GM</div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Mechanical Engineer — Manufacturing, Robotics, Additive</h1>
+  <p>
+    I design, analyze, and manufacture mechanical systems. Experience with CNC machining, UAV motor mount design,
+    and physics-informed models for laser metal deposition (LMD). I like taking ideas from CAD to something you can actually make.
+  </p>
+  <a class="btn" href="YOUR_RESUME_LINK.pdf" target="_blank">Download Resume</a>
+</section>
+
+<section id="about">
+  <h2>About</h2>
+  <p>
+    I'm a mechanical engineer with hands-on exposure to production engineering (NIT Trichy), internships at IIT-M / Western University,
+    and projects in advanced manufacturing. My main interests are: design for manufacturing, additive processes, and mechatronics/robotics.
+  </p>
+</section>
+
+<section id="projects">
+  <h2>Selected Projects</h2>
+  <div class="grid projects-grid">
+    <div class="card">
+      <div class="project-title">Coaxial UAV Motor Mount</div>
+      <p class="tagline">CAD (Creo) • Structural design • UAV lab project</p>
+      <p>Designed a mount to interface a brushless motor with a carbon tube for a coaxial UAV stack. Focus on stiffness, weight, and ease of manufacturing.</p>
+    </div>
+    <div class="card">
+      <div class="project-title">LMD Temperature Field via PINN</div>
+      <p class="tagline">Python • PINN • Additive manufacturing</p>
+      <p>
+        Implemented a physics-informed neural network to predict 3D temperature fields in laser metal deposition,
+        incorporating realistic heat source and boundary conditions.
+      </p>
+    </div>
+    <div class="card">
+      <div class="project-title">CNC Machined Fixture</div>
+      <p class="tagline">DFM • Production engineering</p>
+      <p>
+        Developed a simple workholding / fixture concept for milling operations, documenting toolpaths and tolerances to reduce setup time.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="card">
+    <strong>Ashok Leyland Technical Centre</strong> — Product / Manufacturing exposure<br />
+    <span class="tagline">CAD, process, component-level work</span>
+    <p>Worked on real automotive components, focusing on manufacturability and documentation.</p>
+  </div>
+  <div class="card" style="margin-top:1rem;">
+    <strong>IIT-M / Western University</strong> — Research internships<br />
+    <span class="tagline">Additive, control, modeling</span>
+    <p>Studied magnetorheological-based actuation and thermal behavior in additive processes.</p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:youremail@gmail.com">youremail@gmail.com</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com">linkedin.com/in/yourprofile</a></p>
+  <p>GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a></p>
+</section>
+
+<footer>
+  © 2025 Harish GM — Mechanical Engineering Portfolio
+</footer>
+
+</body>
+</html>
