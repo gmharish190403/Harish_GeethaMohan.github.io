@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>Harish Geetha Mohan | Mechanical Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Harish Geetha Mohan — Mechanical Engineer (M.S. MEAM, University of Pennsylvania) with projects in manufacturing, UAV hardware, motorsport, and additive processes." />
+  <meta name="description" content="Harish Geetha Mohan — Mechanical Engineer (M.S. MEAM, University of Pennsylvania) exploring manufacturing, robotics, and AI for science." />
   <style>
     :root {
       --bg: #0f172a;
@@ -113,10 +113,12 @@
 </header>
 
 <section class="hero">
-  <h1>Mechanical Engineer — Manufacturing, Robotics, Additive</h1>
+  <h1>Mechanical Engineer — Manufacturing, Robotics, AI for Science</h1>
   <p>
     M.S. Mechanical Engineering & Applied Mechanics (MEAM), University of Pennsylvania.
-    I like building things that actually get manufactured — UAV hardware, BAJA vehicle parts, and process models for additive.
+    I’m interested in the intersection of mechanical engineering and AI — using learning-based methods to speed up
+    simulation, process optimization, and materials/manufacturing workflows. Most of my earlier work is hands-on
+    mechanical design and FEA; now I’m layering AI-for-science ideas on top of that.
   </p>
   <a class="btn" href="Harish_Resume.pdf" target="_blank">Download Resume</a>
 </section>
@@ -124,8 +126,8 @@
 <section id="about">
   <h2>About</h2>
   <p>
-    Background in production/mechanical engineering and motorsport teams, now at Penn working closer to UAV and advanced manufacturing.
-    I try to keep my projects end-to-end: model → simulate → build → test.
+    I like projects that go model → simulate → build → test. I’ve done that in BAJA (PSI Racing), in additive
+    manufacturing simulations, and now I’m starting to do it for UAV hardware and neural-operator style models for WAAM.
   </p>
 </section>
 
@@ -135,38 +137,24 @@
 
     <!-- PSI Racing -->
     <div class="card">
-      <img src="psi-baja.png"
-           alt="PSI Racing BAJA ATV"
-           style="width:100%; max-height:200px; object-fit:cover; border-radius:0.5rem; margin-bottom:0.6rem; box-shadow:0 2px 8px rgba(0,0,0,0.25);">
+      <img src="psi-baja.png" alt="PSI Racing BAJA ATV"
+           style="width:100%; max-height:200px; object-fit:cover; border-radius:0.5rem; margin-bottom:0.6rem;">
       <div class="project-title">PSI Racing – Suspension & Steering Subsystem</div>
       <p class="tagline">NIT Trichy • Design, validation, manufacturability</p>
       <p>
-        Designed and validated BAJA ATV components that could actually be made in the campus workshop. Modeled in PTC Creo and
-        checked in ANSYS Workbench for steering, cornering and knuckle loads to stay inside SAE BAJA limits.
+        Designed and validated BAJA ATV components that could actually be made in the campus workshop.
+        Modeled in PTC Creo and ran ANSYS Workbench checks for steering, cornering and knuckle loads to stay inside SAE BAJA limits.
       </p>
       <p><strong>Highlights:</strong> CAD, FEA, vehicle-level validation</p>
-    </div>
-
-    <!-- UAV Motor Mount (in progress) -->
-    <div class="card">
-      <img src="motor_mount.png"
-           alt="Coaxial UAV Motor Mount CAD"
-           style="width:100%; max-height:200px; object-fit:cover; border-radius:0.5rem; margin-bottom:0.6rem;">
-      <div class="project-title">Coaxial UAV Motor Mount (in progress)</div>
-      <p class="tagline">Penn UAV Lab • CAD • Hardware</p>
-      <p>
-        Early-stage design of a mount to connect a brushless motor to a carbon tube in a coaxial stack.
-        Right now working on clamp geometry and fastener accessibility so it can be 3D printed or machined quickly for lab tests.
-      </p>
     </div>
 
     <!-- PINN of LMD -->
     <div class="card">
       <div class="project-title">PINN of LMD (Laser Metal Deposition)</div>
-      <p class="tagline">PyTorch • Physics-Informed Neural Networks • Additive</p>
+      <p class="tagline">PyTorch • Physics-Informed ML • Additive</p>
       <p>
         Built a PINN to predict 3D temperature fields in LMD by enforcing the heat-transfer PDE and realistic laser boundary
-        conditions directly in the loss. Compared the PINN results with FEM / literature.
+        conditions directly in the loss. Compared against FEM / literature to keep solutions physical.
       </p>
       <p>
         <strong>Code:</strong>
@@ -178,26 +166,46 @@
 
     <!-- MR Clutch -->
     <div class="card">
-      <img src="mr-clutch-exploded.png"
-           alt="MR clutch exploded view"
+      <img src="mr-clutch-exploded.png" alt="MR clutch exploded view"
            style="width:100%; max-height:200px; object-fit:cover; border-radius:0.5rem; margin-bottom:0.6rem;">
       <div class="project-title">Magnetorheological Clutch – Control & Testing</div>
       <p class="tagline">Western University, Canada • Research</p>
       <p>
-        Designed and tested a mini MR clutch with a planetary layout and instrumented it with Arduino Mega 2560 to acquire speed/torque data.
-        Validated the model against the experimental runs.
+        Designed and tested a mini MR clutch with a planetary layout and instrumented it with Arduino Mega 2560 to acquire speed/torque.
+        Validated the model with experimental runs.
       </p>
     </div>
 
     <!-- WAAM -->
     <div class="card">
-      <img src="waam.png"
-           alt="WAAM simulation optimization"
+      <img src="waam.png" alt="WAAM simulation optimization"
            style="width:100%; max-height:200px; object-fit:cover; border-radius:0.5rem; margin-bottom:0.6rem;">
       <div class="project-title">Optimization of Wire Arc Additive Manufacturing</div>
-      <p class="tagline">NIT Trichy • Simufact Welding • Goal programming</p>
+      <p class="tagline">NIT Trichy • Simufact Welding</p>
       <p>
-        Simulated WAAM to understand distortion and residual stress across multi-layer beads and tuned process parameters for better stability.
+        Simulated WAAM to study distortion and residual stress across multi-layer beads and tuned process parameters for better stability.
+      </p>
+    </div>
+
+    <!-- Coaxial UAV Motor Mount (in progress) -->
+    <div class="card">
+      <img src="motor_mount.png" alt="Coaxial UAV Motor Mount CAD"
+           style="width:100%; max-height:200px; object-fit:cover; border-radius:0.5rem; margin-bottom:0.6rem;">
+      <div class="project-title">Coaxial UAV Motor Mount (in progress)</div>
+      <p class="tagline">Penn UAV Lab • hardware under work</p>
+      <p>
+        Early design of a mount to connect a brushless motor to a carbon tube in a coaxial stack.
+        Currently working through clamp geometry and fastener access so it can be 3D printed / machined quickly for lab tests.
+      </p>
+    </div>
+
+    <!-- PINO for WAAM (in progress) -->
+    <div class="card">
+      <div class="project-title">PINO for WAAM (in progress)</div>
+      <p class="tagline">Neural operators • AI for science • course project</p>
+      <p>
+        Building a Physics-Informed Neural Operator for Wire Arc Additive Manufacturing to solve reverse / parameter-identification problems
+        faster than running full simulations. Part of an AI-for-science style course — still being developed.
       </p>
     </div>
 
@@ -232,7 +240,7 @@
       <img src="drone.png" alt="Penn UAV motor test rig"
            style="width:100%; max-height:200px; object-fit:cover; border-radius:0.4rem;">
       <p style="font-size:0.75rem; color:#94a3b8; margin-top:0.4rem;">
-        Penn UAV lab — early motor/thrust test rig related to the coaxial mount work. Hardware stage, actively being refined.
+        Penn UAV lab — early motor/thrust test rig connected to the coaxial mount work.
       </p>
     </div>
 
@@ -262,7 +270,7 @@
     <strong>Research Intern, IIT Madras, India</strong> — May 2022 – May 2024<br />
     <span class="tagline">Suspension modeling • Simulink</span>
     <p>
-      Modeled a quarter-car suspension in MATLAB/Simulink and analyzed ride comfort and handling through Response Surface Methodology.
+      Modeled a quarter-car suspension in MATLAB/Simulink and analyzed ride comfort and handling using RSM.
     </p>
   </div>
 </section>
