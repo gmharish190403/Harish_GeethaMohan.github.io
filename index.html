@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>Harish Geetha Mohan | Mechanical Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Portfolio of Harish Geetha Mohan — Mechanical Engineer at the University of Pennsylvania specializing in design, manufacturing, robotics, and additive processes." />
+  <meta name="description" content="Portfolio of Harish Geetha Mohan — Mechanical Engineer (M.S. MEAM, University of Pennsylvania) with projects in manufacturing, UAV hardware, motorsport, and additive processes." />
   <style>
     :root {
       --bg: #0f172a;
@@ -116,8 +116,8 @@
   <h1>Mechanical Engineer — Manufacturing, Robotics, Additive</h1>
   <p>
     M.S. student in Mechanical Engineering & Applied Mechanics at the University of Pennsylvania.
-    I focus on taking mechanical designs from CAD to manufacturable reality — bridging design, simulation, and fabrication.
-    Experience across UAV mount design, PSI Racing vehicle components, and PINN-based modeling of Laser Metal Deposition.
+    I work on taking mechanical designs from CAD to something you can actually build — across UAV hardware, BAJA racing vehicles,
+    and simulation-driven additive manufacturing. Strong base from NIT Trichy (Production Engineering, CGPA 8.98/10).
   </p>
   <a class="btn" href="Harish_Resume.pdf" target="_blank">Download Resume</a>
 </section>
@@ -125,13 +125,11 @@
 <section id="about">
   <h2>About</h2>
   <p>
-    I’m currently pursuing my M.S. in Mechanical Engineering and Applied Mechanics (MEAM) at Penn, after earning my B.Tech
-    in Production Engineering from NIT Tiruchirappalli (CGPA 8.98/10). My focus areas are
-    <strong>design for manufacturing</strong>, <strong>additive manufacturing</strong>, and <strong>computational modeling</strong>.
+    I like problems where design, manufacturability, and validation all have to line up. That’s why most of my work is either
+    motorsport (PSI Racing), UAV test rigs at Penn, or additive manufacturing with proper process modeling.
   </p>
   <p>
-    I’ve worked on vehicle system design at Ashok Leyland, simulation-driven additive manufacturing at NIT Trichy,
-    and the PSI Racing team’s BAJA ATV. I enjoy turning mechanical ideas into validated physical systems.
+    Current interests: design for manufacturing (CNC/3DP), UAV and robotic hardware, physics-informed ML for process modeling.
   </p>
 </section>
 
@@ -141,36 +139,39 @@
 
     <!-- PSI Racing -->
     <div class="card">
-      <img src="psi-baja.png" 
-           alt="PSI Racing BAJA ATV" 
+      <img src="psi-baja.png"
+           alt="PSI Racing BAJA ATV"
            style="width:100%; max-height:200px; object-fit:cover; border-radius:0.5rem; margin-bottom:0.6rem; box-shadow:0 2px 8px rgba(0,0,0,0.25);">
       <div class="project-title">PSI Racing – Suspension & Steering Subsystem</div>
       <p class="tagline">NIT Trichy • Design, validation, manufacturability</p>
       <p>
-        Designed and validated components for the BAJA ATV as part of the PSI Racing team — focusing on parts we could
-        actually fabricate in the NIT Trichy workshop. Used PTC Creo for modeling and ANSYS Workbench for structural checks
-        (cornering, steering gear, and knuckle loads) to stay within SAE BAJA safety and performance limits.
+        Designed and validated components for the BAJA ATV, focusing on parts we could actually fabricate in the NIT Trichy workshop.
+        Modeled in PTC Creo and ran ANSYS Workbench checks for cornering, steering gear, and knuckle loads to stay within SAE BAJA limits.
       </p>
       <p><strong>Highlights:</strong> CAD, FEA, vehicle-level validation, design documentation</p>
     </div>
 
-    <!-- UAV Mount -->
+    <!-- UAV Motor Mount (in progress) -->
     <div class="card">
-      <div class="project-title">Coaxial UAV Motor Mount</div>
-      <p class="tagline">CAD (Creo) • Structural design • Lab project</p>
+      <img src="motor_mount.png"
+           alt="Coaxial UAV Motor Mount CAD"
+           style="width:100%; max-height:200px; object-fit:cover; border-radius:0.5rem; margin-bottom:0.6rem;">
+      <div class="project-title">Coaxial UAV Motor Mount (in progress)</div>
+      <p class="tagline">Penn UAV Lab • CAD (SolidWorks/Creo) • Hardware</p>
       <p>
-        Designed a mount to interface a brushless motor with a carbon tube in a coaxial UAV stack.
-        Prioritized stiffness, weight reduction, and ease of machining/3D printing for rapid iteration.
+        Ongoing design of a motor mount to interface a brushless motor with a carbon tube in a coaxial UAV stack.
+        Current iteration focuses on clamp geometry, fastener accessibility, and keeping the part printable/machinable for quick lab tests.
       </p>
+      <p><strong>Status:</strong> modelling & design iterations underway</p>
     </div>
 
     <!-- PINN of LMD -->
     <div class="card">
       <div class="project-title">PINN of LMD (Laser Metal Deposition)</div>
-      <p class="tagline">PyTorch • Physics-Informed Neural Networks • Additive manufacturing</p>
+      <p class="tagline">PyTorch • Physics-Informed Neural Networks • Additive</p>
       <p>
-        Developed a PINN framework in PyTorch to predict 3D temperature fields in the LMD process by enforcing the heat-transfer PDE
-        and realistic laser boundary conditions directly in the loss function. Compared results with FEM and literature to ensure physical accuracy.
+        Built a PINN to predict 3D temperature fields in LMD by enforcing the heat-transfer PDE and realistic laser boundary
+        conditions directly in the loss. Compared the PINN results with FEM / literature to keep the solution physically meaningful.
       </p>
       <p>
         <strong>Code:</strong>
@@ -182,39 +183,75 @@
 
     <!-- MR Clutch -->
     <div class="card">
-      <img src="mr-clutch-exploded.png" alt="MR clutch exploded view" style="width:100%; max-height:200px; object-fit:cover; border-radius:0.5rem; margin-bottom:0.6rem;">
+      <img src="mr-clutch-exploded.png"
+           alt="MR clutch exploded view"
+           style="width:100%; max-height:200px; object-fit:cover; border-radius:0.5rem; margin-bottom:0.6rem;">
       <div class="project-title">Magnetorheological Clutch – Control & Testing</div>
       <p class="tagline">Western University, Canada • Research</p>
       <p>
-        Designed and tested a miniaturized planetary MR clutch to achieve controllable torque transfer.
-        Modeled the clutch, instrumented it with Arduino Mega 2560 for torque/speed data, and compared experimental results
-        with analytical models to validate MR fluid response.
+        Designed and tested a miniaturized planetary MR clutch to get variable torque transfer.
+        Instrumented with Arduino Mega 2560 for speed/torque acquisition and compared the experimental results with the analytical model.
       </p>
     </div>
 
     <!-- WAAM -->
     <div class="card">
-      <img src="waam.png" alt="WAAM simulation optimization" style="width:100%; max-height:200px; object-fit:cover; border-radius:0.5rem; margin-bottom:0.6rem;">
+      <img src="waam.png"
+           alt="WAAM simulation optimization"
+           style="width:100%; max-height:200px; object-fit:cover; border-radius:0.5rem; margin-bottom:0.6rem;">
       <div class="project-title">Optimization of Wire Arc Additive Manufacturing</div>
       <p class="tagline">Final-year project • NIT Trichy</p>
       <p>
-        Simulated the WAAM process in <strong>Simufact Welding</strong> to minimize residual stresses and distortions across multi-layer deposits.
-        Applied <strong>Goal Programming</strong> for process parameter optimization and validated results with experimental trials.
+        Simulated WAAM in Simufact Welding to reduce residual stresses/distortion across multi-layer deposits.
+        Used Goal Programming for process parameter selection and validated with experimental trials.
       </p>
       <p><strong>Tools:</strong> Simufact Welding, MATLAB, CAD</p>
     </div>
+
   </div>
 
-  <h3 style="margin-top:2rem; font-size:1.05rem;">Gallery — Simulations & Prototypes</h3>
+  <h3 style="margin-top:2rem; font-size:1.05rem;">Gallery — Simulations, Prototypes & Testing</h3>
   <div style="display:grid; gap:0.8rem; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));">
+
+    <!-- PSI FEA -->
     <div style="background:#111827; border:1px solid rgba(255,255,255,0.03); border-radius:0.5rem; padding:0.5rem;">
-      <img src="psi-fea-chassis.png" alt="BAJA FEA results" style="width:100%; max-height:180px; object-fit:cover; border-radius:0.4rem;">
-      <p style="font-size:0.75rem; color:#94a3b8; margin-top:0.4rem;">BAJA chassis and steering FEA — Von Mises stress distribution for impact and rollover.</p>
+      <img src="psi-fea-chassis.png"
+           alt="BAJA FEA results"
+           style="width:100%; max-height:180px; object-fit:cover; border-radius:0.4rem;">
+      <p style="font-size:0.75rem; color:#94a3b8; margin-top:0.4rem;">
+        BAJA chassis and steering FEA — Von Mises stress distribution for impact and rollover.
+      </p>
     </div>
+
+    <!-- MR clutch test -->
     <div style="background:#111827; border:1px solid rgba(255,255,255,0.03); border-radius:0.5rem; padding:0.5rem;">
-      <img src="mr-clutch-test.png" alt="MR clutch testing setup" style="width:100%; max-height:180px; object-fit:cover; border-radius:0.4rem;">
-      <p style="font-size:0.75rem; color:#94a3b8; margin-top:0.4rem;">Experimental setup for MR clutch — torque and speed acquisition with embedded sensors.</p>
+      <img src="mr-clutch-test.png"
+           alt="MR clutch testing setup"
+           style="width:100%; max-height:180px; object-fit:cover; border-radius:0.4rem;">
+      <p style="font-size:0.75rem; color:#94a3b8; margin-top:0.4rem;">
+        Experimental setup for MR clutch — torque and speed acquisition with embedded sensors.
+      </p>
     </div>
+
+    <!-- PSI crash video -->
+    <div style="background:#111827; border:1px solid rgba(255,255,255,0.03); border-radius:0.5rem; padding:0.5rem;">
+      <video src="crash.mp4" controls style="width:100%; border-radius:0.4rem; max-height:200px; object-fit:cover;"></video>
+      <p style="font-size:0.75rem; color:#94a3b8; margin-top:0.4rem;">
+        PSI Racing — endurance/crash footage from BAJA. Used to observe chassis load paths, steering mount behavior,
+        and to feed back into the next knuckle + frame iteration.
+      </p>
+    </div>
+
+    <!-- Drone IRL -->
+    <div style="background:#111827; border:1px solid rgba(255,255,255,0.03); border-radius:0.5rem; padding:0.5rem;">
+      <img src="drone.png"
+           alt="Penn UAV motor test rig"
+           style="width:100%; max-height:200px; object-fit:cover; border-radius:0.4rem;">
+      <p style="font-size:0.75rem; color:#94a3b8; margin-top:0.4rem;">
+        Penn UAV lab — early motor/thrust test rig related to the coaxial mount work. Hardware stage, actively being refined.
+      </p>
+    </div>
+
   </div>
 </section>
 
