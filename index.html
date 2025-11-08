@@ -28,6 +28,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
     }
     nav a {
       color: var(--text);
@@ -96,9 +97,7 @@
       font-size: 0.75rem;
       color: #94a3b8;
     }
-    a {
-      color: var(--accent);
-    }
+    a { color: var(--accent); }
   </style>
 </head>
 <body>
@@ -117,8 +116,8 @@
   <h1>Mechanical Engineer — Manufacturing, Robotics, Additive</h1>
   <p>
     M.S. student in Mechanical Engineering & Applied Mechanics at the University of Pennsylvania.
-    I focus on taking mechanical designs from CAD to reality — bridging design, manufacturing, and simulation.
-    Experience across UAV mount design, PSI Racing vehicle components, and physics-informed models for additive processes.
+    I focus on taking mechanical designs from CAD to manufacturable reality — bridging design, simulation, and fabrication.
+    Experience across UAV mount design, PSI Racing vehicle components, and PINN-based modeling of Laser Metal Deposition.
   </p>
   <a class="btn" href="Harish_Resume.pdf" target="_blank">Download Resume</a>
 </section>
@@ -126,14 +125,13 @@
 <section id="about">
   <h2>About</h2>
   <p>
-    I'm currently pursuing my M.S. in Mechanical Engineering and Applied Mechanics (MEAM) at Penn, building on my B.Tech
-    in Production Engineering from NIT Tiruchirappalli (CGPA 8.98/10). My interests lie in
-    <strong>design for manufacturing</strong>, <strong>additive manufacturing</strong>, and <strong>computational mechanics</strong>.
+    I’m currently pursuing my M.S. in Mechanical Engineering and Applied Mechanics (MEAM) at Penn, after earning my B.Tech
+    in Production Engineering from NIT Tiruchirappalli (CGPA 8.98/10). My focus areas are
+    <strong>design for manufacturing</strong>, <strong>additive manufacturing</strong>, and <strong>computational modeling</strong>.
   </p>
   <p>
-    My recent work includes simulation-driven design at Ashok Leyland Technical Centre,
-    advanced thermal modeling of additive manufacturing (LMD) using physics-informed neural networks,
-    and motorsport engineering through the PSI Racing team at NIT Trichy.
+    I’ve worked on vehicle system design at Ashok Leyland, simulation-driven additive manufacturing at NIT Trichy,
+    and the PSI Racing team’s BAJA ATV. I enjoy turning mechanical ideas into validated physical systems.
   </p>
 </section>
 
@@ -143,7 +141,9 @@
 
     <!-- PSI Racing -->
     <div class="card">
-      <img src="psi-baja.jpg" alt="PSI Racing BAJA ATV" style="width:100%; border-radius:0.4rem; margin-bottom:0.6rem;">
+      <img src="psi-baja.png" 
+           alt="PSI Racing BAJA ATV" 
+           style="width:100%; max-height:200px; object-fit:cover; border-radius:0.5rem; margin-bottom:0.6rem; box-shadow:0 2px 8px rgba(0,0,0,0.25);">
       <div class="project-title">PSI Racing – Suspension & Steering Subsystem</div>
       <p class="tagline">NIT Trichy • Design, validation, manufacturability</p>
       <p>
@@ -151,10 +151,10 @@
         actually fabricate in the NIT Trichy workshop. Used PTC Creo for modeling and ANSYS Workbench for structural checks
         (cornering, steering gear, and knuckle loads) to stay within SAE BAJA safety and performance limits.
       </p>
-      <p><strong>Highlights:</strong> CAD, FEA, report documentation, vehicle-level validation</p>
+      <p><strong>Highlights:</strong> CAD, FEA, vehicle-level validation, design documentation</p>
     </div>
 
-    <!-- UAV mount -->
+    <!-- UAV Mount -->
     <div class="card">
       <div class="project-title">Coaxial UAV Motor Mount</div>
       <p class="tagline">CAD (Creo) • Structural design • Lab project</p>
@@ -164,37 +164,42 @@
       </p>
     </div>
 
-    <!-- LMD PINN -->
+    <!-- PINN of LMD -->
     <div class="card">
-      <div class="project-title">Physics-Informed Thermal Modeling of LMD</div>
-      <p class="tagline">Python • PINN • Advanced manufacturing</p>
+      <div class="project-title">PINN of LMD (Laser Metal Deposition)</div>
+      <p class="tagline">PyTorch • Physics-Informed Neural Networks • Additive manufacturing</p>
       <p>
-        Built a physics-informed neural network in PyTorch to predict 3D temperature fields in laser metal deposition,
-        incorporating convection/radiation losses and realistic laser heat inputs. Validated with FEM and benchmark data.
+        Developed a PINN framework in PyTorch to predict 3D temperature fields in the LMD process by enforcing the heat-transfer PDE
+        and realistic laser boundary conditions directly in the loss function. Compared results with FEM and literature to ensure physical accuracy.
+      </p>
+      <p>
+        <strong>Code:</strong>
+        <a href="https://github.com/gmharish190403/LMD_OPT/tree/main" target="_blank">
+          github.com/gmharish190403/LMD_OPT
+        </a>
       </p>
     </div>
 
-    <!-- MR clutch -->
+    <!-- MR Clutch -->
     <div class="card">
-      <img src="mr-clutch-exploded.png" alt="MR clutch exploded view" style="width:100%; border-radius:0.4rem; margin-bottom:0.6rem;">
+      <img src="mr-clutch-exploded.png" alt="MR clutch exploded view" style="width:100%; max-height:200px; object-fit:cover; border-radius:0.5rem; margin-bottom:0.6rem;">
       <div class="project-title">Magnetorheological Clutch – Control & Testing</div>
       <p class="tagline">Western University, Canada • Research</p>
       <p>
         Designed and tested a miniaturized planetary MR clutch to achieve controllable torque transfer.
-        Modeled the clutch, instrumented it with Arduino Mega 2560 for speed/torque acquisition,
-        and compared experimental results with analytical predictions to validate the MR fluid’s response.
+        Modeled the clutch, instrumented it with Arduino Mega 2560 for torque/speed data, and compared experimental results
+        with analytical models to validate MR fluid response.
       </p>
     </div>
 
     <!-- WAAM -->
     <div class="card">
-      <img src="waam.png" alt="WAAM simulation optimization" style="width:100%; border-radius:0.4rem; margin-bottom:0.6rem;">
+      <img src="waam.png" alt="WAAM simulation optimization" style="width:100%; max-height:200px; object-fit:cover; border-radius:0.5rem; margin-bottom:0.6rem;">
       <div class="project-title">Optimization of Wire Arc Additive Manufacturing</div>
       <p class="tagline">Final-year project • NIT Trichy</p>
       <p>
-        Simulated the WAAM process in <strong>Simufact Welding</strong> to minimize residual stresses and distortions
-        across multi-layer bead deposits. Applied <strong>Goal Programming</strong> for process parameter optimization
-        and validated simulation results with physical prints.
+        Simulated the WAAM process in <strong>Simufact Welding</strong> to minimize residual stresses and distortions across multi-layer deposits.
+        Applied <strong>Goal Programming</strong> for process parameter optimization and validated results with experimental trials.
       </p>
       <p><strong>Tools:</strong> Simufact Welding, MATLAB, CAD</p>
     </div>
@@ -203,11 +208,11 @@
   <h3 style="margin-top:2rem; font-size:1.05rem;">Gallery — Simulations & Prototypes</h3>
   <div style="display:grid; gap:0.8rem; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));">
     <div style="background:#111827; border:1px solid rgba(255,255,255,0.03); border-radius:0.5rem; padding:0.5rem;">
-      <img src="psi-fea-chassis.png" alt="BAJA FEA results" style="width:100%; border-radius:0.4rem;">
+      <img src="psi-fea-chassis.png" alt="BAJA FEA results" style="width:100%; max-height:180px; object-fit:cover; border-radius:0.4rem;">
       <p style="font-size:0.75rem; color:#94a3b8; margin-top:0.4rem;">BAJA chassis and steering FEA — Von Mises stress distribution for impact and rollover.</p>
     </div>
     <div style="background:#111827; border:1px solid rgba(255,255,255,0.03); border-radius:0.5rem; padding:0.5rem;">
-      <img src="mr-clutch-test.png" alt="MR clutch testing setup" style="width:100%; border-radius:0.4rem;">
+      <img src="mr-clutch-test.png" alt="MR clutch testing setup" style="width:100%; max-height:180px; object-fit:cover; border-radius:0.4rem;">
       <p style="font-size:0.75rem; color:#94a3b8; margin-top:0.4rem;">Experimental setup for MR clutch — torque and speed acquisition with embedded sensors.</p>
     </div>
   </div>
@@ -219,7 +224,7 @@
     <strong>Product Developer Intern, Ashok Leyland Technical Centre (R&D)</strong> — Nov 2024 – Feb 2025<br />
     <span class="tagline">Vehicle systems • Manufacturing • Cross-functional collaboration</span>
     <p>
-      Worked on the development of a new LNG/Diesel truck platform, supporting vehicle-level design and manufacturability reviews.
+      Worked on development of a new LNG/Diesel truck platform, supporting vehicle-level design and manufacturability reviews.
       Collaborated with teams on CAD, packaging, and feasibility of critical subsystems.
     </p>
   </div>
