@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>Harish Geetha Mohan | Mechanical Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Mechanical engineering portfolio of Harish Geetha Mohan: design, manufacturing, UAV, additive, and research." />
+  <meta name="description" content="Portfolio of Harish Geetha Mohan — Mechanical Engineer at the University of Pennsylvania specializing in design, manufacturing, robotics, and additive processes." />
   <style>
     :root {
       --bg: #0f172a;
@@ -117,10 +117,9 @@
   <h1>Mechanical Engineer — Manufacturing, Robotics, Additive</h1>
   <p>
     M.S. student in Mechanical Engineering & Applied Mechanics at the University of Pennsylvania.
-    I work on taking mechanical designs from CAD to something manufacturable — with experience across CNC,
-    UAV motor mount design, PSI Racing vehicle components, and physics-informed modeling of laser metal deposition.
+    I focus on taking mechanical designs from CAD to reality — bridging design, manufacturing, and simulation.
+    Experience across UAV mount design, PSI Racing vehicle components, and physics-informed models for additive processes.
   </p>
-  <!-- upload your PDF to the repo as Harish_Resume.pdf and this will work -->
   <a class="btn" href="Harish_Resume.pdf" target="_blank">Download Resume</a>
 </section>
 
@@ -128,27 +127,31 @@
   <h2>About</h2>
   <p>
     I'm currently pursuing my M.S. in Mechanical Engineering and Applied Mechanics (MEAM) at Penn, building on my B.Tech
-    in Production Engineering from NIT Tiruchirappalli (CGPA 8.98/10). I enjoy the intersection of
-    <strong>design for manufacturing</strong>, <strong>additive processes</strong>, and <strong>computational modeling</strong>.
+    in Production Engineering from NIT Tiruchirappalli (CGPA 8.98/10). My interests lie in
+    <strong>design for manufacturing</strong>, <strong>additive manufacturing</strong>, and <strong>computational mechanics</strong>.
   </p>
   <p>
-    Recent work includes designing UAV hardware, developing PINN-based thermal models for LMD, and contributing to PSI Racing
-    (suspension & steering subsystem) where the parts actually had to be made and validated.
+    My recent work includes simulation-driven design at Ashok Leyland Technical Centre,
+    advanced thermal modeling of additive manufacturing (LMD) using physics-informed neural networks,
+    and motorsport engineering through the PSI Racing team at NIT Trichy.
   </p>
 </section>
 
 <section id="projects">
   <h2>Selected Projects</h2>
   <div class="grid projects-grid">
+
     <!-- PSI Racing -->
     <div class="card">
+      <img src="psi-baja.jpg" alt="PSI Racing BAJA ATV" style="width:100%; border-radius:0.4rem; margin-bottom:0.6rem;">
       <div class="project-title">PSI Racing – Suspension & Steering Subsystem</div>
       <p class="tagline">NIT Trichy • Design, validation, manufacturability</p>
       <p>
-        Worked on the design, validation, and fabrication of the front and rear suspensions of an All-Terrain Vehicle (BAJA SAE).
-        Used PTC Creo and Lotus for design, and ANSYS Workbench for auxiliary checks. Focused on parts we could actually make in-house
-        and on meeting Baja competition standards.
+        Designed and validated components for the BAJA ATV as part of the PSI Racing team — focusing on parts we could
+        actually fabricate in the NIT Trichy workshop. Used PTC Creo for modeling and ANSYS Workbench for structural checks
+        (cornering, steering gear, and knuckle loads) to stay within SAE BAJA safety and performance limits.
       </p>
+      <p><strong>Highlights:</strong> CAD, FEA, report documentation, vehicle-level validation</p>
     </div>
 
     <!-- UAV mount -->
@@ -157,7 +160,7 @@
       <p class="tagline">CAD (Creo) • Structural design • Lab project</p>
       <p>
         Designed a mount to interface a brushless motor with a carbon tube in a coaxial UAV stack.
-        Prioritized stiffness, weight reduction, and ease of machining/3D printing so it can be iterated quickly.
+        Prioritized stiffness, weight reduction, and ease of machining/3D printing for rapid iteration.
       </p>
     </div>
 
@@ -167,27 +170,45 @@
       <p class="tagline">Python • PINN • Advanced manufacturing</p>
       <p>
         Built a physics-informed neural network in PyTorch to predict 3D temperature fields in laser metal deposition,
-        incorporating convection/radiation losses and realistic laser heat inputs. Compared with FEM and literature (NIST AM-bench style).
+        incorporating convection/radiation losses and realistic laser heat inputs. Validated with FEM and benchmark data.
       </p>
     </div>
 
-    <!-- Magnetorheological clutch work -->
+    <!-- MR clutch -->
     <div class="card">
+      <img src="mr-clutch-exploded.png" alt="MR clutch exploded view" style="width:100%; border-radius:0.4rem; margin-bottom:0.6rem;">
       <div class="project-title">Magnetorheological Clutch – Control & Testing</div>
       <p class="tagline">Western University, Canada • Research</p>
       <p>
-        Designed and tested a miniaturized planetary MR clutch to transfer variable torque, instrumented with Arduino Mega 2560 to collect speed and torque data.
-        Validated the model against experimental results.
+        Designed and tested a miniaturized planetary MR clutch to achieve controllable torque transfer.
+        Modeled the clutch, instrumented it with Arduino Mega 2560 for speed/torque acquisition,
+        and compared experimental results with analytical predictions to validate the MR fluid’s response.
       </p>
     </div>
 
-    <!-- WAAM / final year -->
+    <!-- WAAM -->
     <div class="card">
+      <img src="waam.png" alt="WAAM simulation optimization" style="width:100%; border-radius:0.4rem; margin-bottom:0.6rem;">
       <div class="project-title">Optimization of Wire Arc Additive Manufacturing</div>
       <p class="tagline">Final-year project • NIT Trichy</p>
       <p>
-        Simulated the WAAM process in Simufact Welding to minimize residual stresses and distortions. Validated with experimental trials and used Goal Programming to obtain optimal process windows.
+        Simulated the WAAM process in <strong>Simufact Welding</strong> to minimize residual stresses and distortions
+        across multi-layer bead deposits. Applied <strong>Goal Programming</strong> for process parameter optimization
+        and validated simulation results with physical prints.
       </p>
+      <p><strong>Tools:</strong> Simufact Welding, MATLAB, CAD</p>
+    </div>
+  </div>
+
+  <h3 style="margin-top:2rem; font-size:1.05rem;">Gallery — Simulations & Prototypes</h3>
+  <div style="display:grid; gap:0.8rem; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));">
+    <div style="background:#111827; border:1px solid rgba(255,255,255,0.03); border-radius:0.5rem; padding:0.5rem;">
+      <img src="psi-fea-chassis.png" alt="BAJA FEA results" style="width:100%; border-radius:0.4rem;">
+      <p style="font-size:0.75rem; color:#94a3b8; margin-top:0.4rem;">BAJA chassis and steering FEA — Von Mises stress distribution for impact and rollover.</p>
+    </div>
+    <div style="background:#111827; border:1px solid rgba(255,255,255,0.03); border-radius:0.5rem; padding:0.5rem;">
+      <img src="mr-clutch-test.png" alt="MR clutch testing setup" style="width:100%; border-radius:0.4rem;">
+      <p style="font-size:0.75rem; color:#94a3b8; margin-top:0.4rem;">Experimental setup for MR clutch — torque and speed acquisition with embedded sensors.</p>
     </div>
   </div>
 </section>
@@ -195,43 +216,41 @@
 <section id="experience">
   <h2>Experience</h2>
   <div class="card">
-    <strong>Product Developer Intern, Ashok Leyland Technical Centre (R&D), India</strong> — Nov 2024 – Feb 2025<br />
-    <span class="tagline">Vehicle systems • Manufacturing • Cross-functional teams</span>
+    <strong>Product Developer Intern, Ashok Leyland Technical Centre (R&D)</strong> — Nov 2024 – Feb 2025<br />
+    <span class="tagline">Vehicle systems • Manufacturing • Cross-functional collaboration</span>
     <p>
-      Worked on the development of a new NCG (Liquified Natural Gas) or Diesel-based truck platform, supporting
-      vehicle-level design decisions and manufacturability checks. Collaborated with engineers from multiple domains.
+      Worked on the development of a new LNG/Diesel truck platform, supporting vehicle-level design and manufacturability reviews.
+      Collaborated with teams on CAD, packaging, and feasibility of critical subsystems.
     </p>
   </div>
 
-    <div class="card" style="margin-top:1rem;">
-      <strong>Finlay CNC Centre, Tiruchirappalli, India</strong> — Aug 2024 – Oct 2024<br />
-      <span class="tagline">CNC turning, drilling, milling</span>
-      <p>
-        Learned and practiced CNC operations, machining aluminum components, and understanding how designs translate to the shop floor.
-      </p>
-    </div>
+  <div class="card" style="margin-top:1rem;">
+    <strong>Finlay CNC Centre, Tiruchirappalli, India</strong> — Aug 2024 – Oct 2024<br />
+    <span class="tagline">CNC machining • Hands-on fabrication</span>
+    <p>
+      Trained on CNC milling, drilling, and turning operations, machining aluminum components and learning DFM principles on the shop floor.
+    </p>
+  </div>
 
-    <div class="card" style="margin-top:1rem;">
-      <strong>Research Intern, IIT Madras, India</strong> — May 2022 – May 2024<br />
-      <span class="tagline">Suspension modeling • Simulink</span>
-      <p>
-        Modeled a quarter-car suspension in MATLAB/Simulink and studied ride comfort vs. handling using Response Surface Methodology.
-      </p>
-    </div>
+  <div class="card" style="margin-top:1rem;">
+    <strong>Research Intern, IIT Madras, India</strong> — May 2022 – May 2024<br />
+    <span class="tagline">Suspension modeling • Simulink</span>
+    <p>
+      Modeled a quarter-car suspension in MATLAB/Simulink and analyzed ride comfort and handling through Response Surface Methodology.
+    </p>
+  </div>
 </section>
 
 <section id="contact">
   <h2>Contact</h2>
   <p>Email: <a href="mailto:harishgm@seas.upenn.edu">harishgm@seas.upenn.edu</a></p>
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/harish-geetha-mohan-b02b20213/" target="_blank">
-    linkedin.com/in/harish-geetha-mohan-b02b20213
-  </a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/harish-geetha-mohan-b02b20213/" target="_blank">linkedin.com/in/harish-geetha-mohan-b02b20213</a></p>
   <p>GitHub: <a href="https://github.com/gmharish190403" target="_blank">github.com/gmharish190403</a></p>
   <p>Location: Philadelphia, PA</p>
 </section>
 
 <footer>
-  © 2025 Harish Geetha Mohan — Mechanical Engineering & Applied Mechanics
+  © 2025 Harish Geetha Mohan — Mechanical Engineering & Applied Mechanics | University of Pennsylvania
 </footer>
 
 </body>
