@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <title>Harish Geetha Mohan | Mechanical Engineer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />ersity of Pennsylvania) with projects in manufacturing, UAV hardware, motorsport, and additive processes." />
-  <meta name="description" content="Portfolio of Harish Geetha Mohan — Mechanical Engineer (M.S. MEAM, Univ
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Harish Geetha Mohan — Mechanical Engineer (M.S. MEAM, University of Pennsylvania) with projects in manufacturing, UAV hardware, motorsport, and additive processes." />
   <style>
     :root {
       --bg: #0f172a;
@@ -71,7 +71,7 @@
       display: grid;
       gap: 1rem;
     }
-    @media(min-width: 850px){
+    @media (min-width: 850px) {
       .projects-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
       }
@@ -115,9 +115,8 @@
 <section class="hero">
   <h1>Mechanical Engineer — Manufacturing, Robotics, Additive</h1>
   <p>
-    M.S. student in Mechanical Engineering & Applied Mechanics at the University of Pennsylvania.
-    I work on taking mechanical designs from CAD to something you can actually build — across UAV hardware, BAJA racing vehicles,
-    and simulation-driven additive manufacturing. Strong base from NIT Trichy (Production Engineering).
+    M.S. Mechanical Engineering & Applied Mechanics (MEAM), University of Pennsylvania.
+    I like building things that actually get manufactured — UAV hardware, BAJA vehicle parts, and process models for additive.
   </p>
   <a class="btn" href="Harish_Resume.pdf" target="_blank">Download Resume</a>
 </section>
@@ -125,11 +124,8 @@
 <section id="about">
   <h2>About</h2>
   <p>
-    I like problems where design, manufacturability, and validation all have to line up. That’s why most of my work is either
-    motorsport (PSI Racing), UAV test rigs at Penn, or additive manufacturing with proper process modeling.
-  </p>
-  <p>
-    Current interests: design for manufacturing (CNC/3DP), UAV and robotic hardware, physics-informed ML for process modeling.
+    Background in production/mechanical engineering and motorsport teams, now at Penn working closer to UAV and advanced manufacturing.
+    I try to keep my projects end-to-end: model → simulate → build → test.
   </p>
 </section>
 
@@ -145,10 +141,10 @@
       <div class="project-title">PSI Racing – Suspension & Steering Subsystem</div>
       <p class="tagline">NIT Trichy • Design, validation, manufacturability</p>
       <p>
-        Designed and validated components for the BAJA ATV, focusing on parts we could actually fabricate in the NIT Trichy workshop.
-        Modeled in PTC Creo and ran ANSYS Workbench checks for cornering, steering gear, and knuckle loads to stay within SAE BAJA limits.
+        Designed and validated BAJA ATV components that could actually be made in the campus workshop. Modeled in PTC Creo and
+        checked in ANSYS Workbench for steering, cornering and knuckle loads to stay inside SAE BAJA limits.
       </p>
-      <p><strong>Highlights:</strong> CAD, FEA, vehicle-level validation, design documentation</p>
+      <p><strong>Highlights:</strong> CAD, FEA, vehicle-level validation</p>
     </div>
 
     <!-- UAV Motor Mount (in progress) -->
@@ -157,12 +153,11 @@
            alt="Coaxial UAV Motor Mount CAD"
            style="width:100%; max-height:200px; object-fit:cover; border-radius:0.5rem; margin-bottom:0.6rem;">
       <div class="project-title">Coaxial UAV Motor Mount (in progress)</div>
-      <p class="tagline">Penn UAV Lab • CAD (SolidWorks/Creo) • Hardware</p>
+      <p class="tagline">Penn UAV Lab • CAD • Hardware</p>
       <p>
-        Ongoing design of a motor mount to interface a brushless motor with a carbon tube in a coaxial UAV stack.
-        Current iteration focuses on clamp geometry, fastener accessibility, and keeping the part printable/machinable for quick lab tests.
+        Early-stage design of a mount to connect a brushless motor to a carbon tube in a coaxial stack.
+        Right now working on clamp geometry and fastener accessibility so it can be 3D printed or machined quickly for lab tests.
       </p>
-      <p><strong>Status:</strong> modelling & design iterations underway</p>
     </div>
 
     <!-- PINN of LMD -->
@@ -171,7 +166,7 @@
       <p class="tagline">PyTorch • Physics-Informed Neural Networks • Additive</p>
       <p>
         Built a PINN to predict 3D temperature fields in LMD by enforcing the heat-transfer PDE and realistic laser boundary
-        conditions directly in the loss. Compared the PINN results with FEM / literature to keep the solution physically meaningful.
+        conditions directly in the loss. Compared the PINN results with FEM / literature.
       </p>
       <p>
         <strong>Code:</strong>
@@ -189,8 +184,8 @@
       <div class="project-title">Magnetorheological Clutch – Control & Testing</div>
       <p class="tagline">Western University, Canada • Research</p>
       <p>
-        Designed and tested a miniaturized planetary MR clutch to get variable torque transfer.
-        Instrumented with Arduino Mega 2560 for speed/torque acquisition and compared the experimental results with the analytical model.
+        Designed and tested a mini MR clutch with a planetary layout and instrumented it with Arduino Mega 2560 to acquire speed/torque data.
+        Validated the model against the experimental runs.
       </p>
     </div>
 
@@ -200,12 +195,10 @@
            alt="WAAM simulation optimization"
            style="width:100%; max-height:200px; object-fit:cover; border-radius:0.5rem; margin-bottom:0.6rem;">
       <div class="project-title">Optimization of Wire Arc Additive Manufacturing</div>
-      <p class="tagline">Final-year project • NIT Trichy</p>
+      <p class="tagline">NIT Trichy • Simufact Welding • Goal programming</p>
       <p>
-        Simulated WAAM in Simufact Welding to reduce residual stresses/distortion across multi-layer deposits.
-        Used Goal Programming for process parameter selection and validated with experimental trials.
+        Simulated WAAM to understand distortion and residual stress across multi-layer beads and tuned process parameters for better stability.
       </p>
-      <p><strong>Tools:</strong> Simufact Welding, MATLAB, CAD</p>
     </div>
 
   </div>
