@@ -112,24 +112,24 @@
   </nav>
 </header>
 
+<!-- ORIGINAL INTRO (RESTORED) -->
 <section class="hero">
-  <h1>Mechanical Engineer — Design, Manufacturing & Intelligent Simulation</h1>
+  <h1>Mechanical Engineer — Manufacturing, Robotics, AI for Science</h1>
   <p>
-    M.S. Mechanical Engineering & Applied Mechanics (MEAM) at the University of Pennsylvania.
-    I work at the intersection of hands-on engineering and AI — designing hardware, building simulations,
-    and using physics-informed machine learning to accelerate workflows in manufacturing and robotics.
-    I enjoy projects that actually get built: CAD → FEA → prototype → test.
+    M.S. Mechanical Engineering & Applied Mechanics (MEAM), University of Pennsylvania.
+    I’m interested in the intersection of mechanical engineering and AI — using learning-based methods to speed up
+    simulation, process optimization, and materials/manufacturing workflows. Most of my earlier work is hands-on
+    mechanical design and FEA; now I’m layering AI-for-science ideas on top of that.
   </p>
   <a class="btn" href="Harish_Resume.pdf" target="_blank">Download Resume</a>
 </section>
 
+<!-- ORIGINAL ABOUT SECTION (RESTORED) -->
 <section id="about">
   <h2>About</h2>
   <p>
-    I like engineering work that closes the loop between theory and the shop floor.
-    I’ve built suspension systems, optimized WAAM and LMD processes, and now I’m exploring neural-operator
-    models for fast simulation and design. Whether it’s machining a part, running FEA, or training a PINN,
-    I enjoy the full pipeline of model → simulate → build → test.
+    I like projects that go model → simulate → build → test. I’ve done that in BAJA (PSI Racing), in additive
+    manufacturing simulations, and now I’m starting to do it for UAV hardware and neural-operator style models for WAAM.
   </p>
 </section>
 
@@ -137,6 +137,7 @@
   <h2>Selected Projects</h2>
   <div class="grid projects-grid">
 
+    <!-- PSI Racing -->
     <div class="card">
       <img src="psi-baja.png" alt="PSI Racing BAJA ATV"
            style="width:100%; max-height:200px; object-fit:cover; border-radius:0.5rem; margin-bottom:0.6rem;">
@@ -144,11 +145,12 @@
       <p class="tagline">NIT Trichy • Design, validation, manufacturability</p>
       <p>
         Designed and validated BAJA ATV components that could actually be made in the campus workshop.
-        Modeled in PTC Creo and ran ANSYS Workbench checks for steering, cornering and knuckle loads within SAE limits.
+        Modeled in PTC Creo and ran ANSYS Workbench checks for steering, cornering and knuckle loads to stay inside SAE BAJA limits.
       </p>
       <p><strong>Highlights:</strong> CAD, FEA, vehicle-level validation</p>
     </div>
 
+    <!-- PINN of LMD -->
     <div class="card">
       <div class="project-title">PINN of LMD (Laser Metal Deposition)</div>
       <p class="tagline">PyTorch • Physics-Informed ML • Additive</p>
@@ -164,17 +166,19 @@
       </p>
     </div>
 
+    <!-- MR Clutch -->
     <div class="card">
       <img src="mr-clutch-exploded.png" alt="MR clutch exploded view"
            style="width:100%; max-height:200px; object-fit:cover; border-radius:0.5rem; margin-bottom:0.6rem;">
       <div class="project-title">Magnetorheological Clutch – Control & Testing</div>
       <p class="tagline">Western University, Canada • Research</p>
       <p>
-        Designed and tested a mini MR clutch with a planetary layout and instrumented it using Arduino Mega 2560
-        for speed/torque acquisition. Validated the model against experimental results.
+        Designed and tested a mini MR clutch with a planetary layout and instrumented it with Arduino Mega 2560 to acquire speed/torque.
+        Validated the model with experimental runs.
       </p>
     </div>
 
+    <!-- WAAM -->
     <div class="card">
       <img src="waam.png" alt="WAAM simulation optimization"
            style="width:100%; max-height:200px; object-fit:cover; border-radius:0.5rem; margin-bottom:0.6rem;">
@@ -185,6 +189,7 @@
       </p>
     </div>
 
+    <!-- Coaxial UAV Motor Mount -->
     <div class="card">
       <img src="motor_mount.png" alt="Coaxial UAV Motor Mount CAD"
            style="width:100%; max-height:200px; object-fit:cover; border-radius:0.5rem; margin-bottom:0.6rem;">
@@ -192,16 +197,17 @@
       <p class="tagline">Penn UAV Lab • hardware under work</p>
       <p>
         Early design of a mount to connect a brushless motor to a carbon tube in a coaxial stack.
-        Currently working through clamp geometry and fastener access so it can be 3D printed or machined quickly for tests.
+        Currently working through clamp geometry and fastener access so it can be 3D printed / machined quickly for lab tests.
       </p>
     </div>
 
+    <!-- PINO for WAAM -->
     <div class="card">
       <div class="project-title">PINO for WAAM (in progress)</div>
       <p class="tagline">Neural operators • AI for science • course project</p>
       <p>
-        Developing a Physics-Informed Neural Operator for WAAM to solve inverse problems faster than full-scale simulations.
-        Still in active development.
+        Building a Physics-Informed Neural Operator for Wire Arc Additive Manufacturing to solve reverse / parameter-identification problems
+        faster than running full simulations. Part of an AI-for-science style course — still being developed.
       </p>
     </div>
 
@@ -222,7 +228,7 @@
       <img src="mr-clutch-test.png" alt="MR clutch testing setup"
            style="width:100%; max-height:180px; object-fit:cover; border-radius:0.4rem;">
       <p style="font-size:0.75rem; color:#94a3b8; margin-top:0.4rem;">
-        Experimental setup for MR clutch — torque and speed acquisition using embedded sensors.
+        Experimental setup for MR clutch — torque and speed acquisition with embedded sensors.
       </p>
     </div>
 
@@ -235,7 +241,7 @@
       <img src="drone.png" alt="Penn UAV motor test rig"
            style="width:100%; max-height:200px; object-fit:cover; border-radius:0.4rem;">
       <p style="font-size:0.75rem; color:#94a3b8; margin-top:0.4rem;">
-        Penn UAV lab — early motor/thrust test rig connected to the coaxial mount design.
+        Penn UAV lab — early motor/thrust test rig connected to the coaxial mount work.
       </p>
     </div>
 
