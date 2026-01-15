@@ -4,281 +4,795 @@
   <meta charset="UTF-8" />
   <title>Harish Geetha Mohan | Mechanical Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Harish Geetha Mohan — Mechanical Engineer (M.S. MEAM, University of Pennsylvania) exploring manufacturing, robotics, and AI for science." />
+  <meta name="description" content="Harish Geetha Mohan — Mechanical Engineer (M.S. MEAM, University of Pennsylvania). Mechanical design + manufacturing + robotics hardware + simulation/AI-for-science." />
+
+  <!-- Open Graph (nice preview when you share the link) -->
+  <meta property="og:title" content="Harish Geetha Mohan | Mechanical Engineer" />
+  <meta property="og:description" content="Mechanical design, manufacturing, robotics hardware, and simulation/AI-for-science projects." />
+  <meta property="og:type" content="website" />
+  <!-- Set this once you add a hero/preview image -->
+  <!-- <meta property="og:image" content="og-preview.png" /> -->
+
   <style>
-    :root {
-      --bg: #0f172a;
-      --card: #111827;
-      --text: #e2e8f0;
-      --muted: #94a3b8;
-      --accent: #38bdf8;
+    :root{
+      --bg: #0b1220;
+      --panel: rgba(17,24,39,0.78);
+      --panel2: rgba(17,24,39,0.55);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --muted2:#94a3b8;
+      --line: rgba(255,255,255,0.06);
+      --accent:#38bdf8;
+      --accent2:#22c55e;
+      --warn:#f59e0b;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 14px;
     }
+
     * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg);
+    html { scroll-behavior: smooth; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background:
+        radial-gradient(1100px 500px at 70% -10%, rgba(56,189,248,.16), transparent 55%),
+        radial-gradient(900px 500px at 10% 0%, rgba(34,197,94,.10), transparent 55%),
+        radial-gradient(800px 500px at 50% 110%, rgba(56,189,248,.10), transparent 55%),
+        var(--bg);
       color: var(--text);
-      line-height: 1.5;
+      line-height: 1.55;
     }
-    header {
-      padding: 2.5rem 1.25rem 1rem;
-      max-width: 1080px;
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container{
+      width: min(1080px, calc(100% - 2.5rem));
       margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    }
+
+    /* ---------- Top Nav ---------- */
+    .topbar{
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(10px);
+      background: rgba(11,18,32,0.65);
+      border-bottom: 1px solid var(--line);
+    }
+    header{
+      padding: 0.9rem 0;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:.75rem;
+      font-weight:800;
+      letter-spacing:.2px;
+    }
+    .brand .dot{
+      width:10px;height:10px;border-radius:999px;background:var(--accent);
+      box-shadow: 0 0 18px rgba(56,189,248,.55);
+    }
+    nav{
+      display:flex;
+      gap: .9rem;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    nav a{
+      color: var(--text);
+      opacity:.9;
+      font-size: .92rem;
+      padding: .35rem .5rem;
+      border-radius: 10px;
+    }
+    nav a:hover{
+      background: rgba(255,255,255,0.05);
+      text-decoration:none;
+    }
+
+    /* ---------- Hero ---------- */
+    .hero{
+      padding: 3.2rem 0 1.2rem;
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 1.3rem;
+      align-items: start;
+    }
+    @media (max-width: 900px){
+      .hero{ grid-template-columns: 1fr; }
+    }
+    .hero-card{
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.25rem 1.1rem;
+      box-shadow: var(--shadow);
+    }
+    .kicker{
+      display:flex;
+      gap:.5rem;
       flex-wrap: wrap;
+      align-items:center;
+      color: var(--muted);
+      font-size:.92rem;
+      margin-bottom:.55rem;
     }
-    nav a {
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:.4rem;
+      padding:.22rem .55rem;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,0.03);
+      color: var(--muted2);
+      font-size:.82rem;
+      white-space:nowrap;
+    }
+    .hero h1{
+      margin: 0.35rem 0 0.45rem;
+      font-size: clamp(2.1rem, 4.6vw, 3.05rem);
+      line-height: 1.08;
+    }
+    .hero p{
+      margin: 0 0 1rem;
+      color: var(--muted2);
+      max-width: 62ch;
+    }
+
+    .cta-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.7rem;
+      margin-top:.25rem;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:.5rem;
+      padding:.62rem 1rem;
+      border-radius: 12px;
+      font-weight: 700;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.04);
       color: var(--text);
-      margin-left: 1rem;
-      text-decoration: none;
-      font-size: 0.9rem;
+      text-decoration:none;
     }
-    .hero {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 2.5rem 1.25rem 2rem;
-    }
-    .hero h1 {
-      font-size: clamp(2.2rem, 5vw, 3rem);
-      margin-bottom: 0.5rem;
-    }
-    .hero p {
-      max-width: 42rem;
-      margin-bottom: 1.5rem;
-    }
-    .btn {
-      display: inline-block;
+    .btn.primary{
       background: var(--accent);
-      color: #0f172a;
-      padding: 0.6rem 1.05rem;
-      border-radius: 0.4rem;
-      font-weight: 600;
-      text-decoration: none;
+      border-color: transparent;
+      color: #07101f;
     }
-    section {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 2rem 1.25rem 1rem;
+    .btn:hover{ text-decoration:none; filter: brightness(1.03); }
+    .btn.primary:hover{ filter: brightness(1.02); }
+
+    .hero-side{
+      display:grid;
+      gap: .9rem;
     }
-    h2 {
-      margin-bottom: 1rem;
-      font-size: 1.4rem;
-    }
-    .grid {
-      display: grid;
-      gap: 1rem;
-    }
-    @media (min-width: 850px) {
-      .projects-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-    }
-    .card {
-      background: var(--card);
-      border: 1px solid rgba(226,232,240,0.04);
-      border-radius: 0.6rem;
+    .mini{
+      background: var(--panel2);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
       padding: 1rem;
     }
-    .tagline {
+    .mini h3{
+      margin:0 0 .45rem;
+      font-size: 1rem;
+      letter-spacing:.2px;
+    }
+    .mini ul{
+      margin:.1rem 0 0;
+      padding-left: 1.05rem;
+      color: var(--muted2);
+    }
+    .mini li{ margin:.28rem 0; }
+    .mini .links{
+      display:flex;
+      flex-direction:column;
+      gap:.45rem;
+      margin-top:.55rem;
+      font-size:.95rem;
+    }
+    .mini .links a{
+      display:inline-flex;
+      gap:.45rem;
+      align-items:center;
+      padding:.35rem .5rem;
+      border-radius:10px;
+    }
+    .mini .links a:hover{
+      background: rgba(255,255,255,0.05);
+      text-decoration:none;
+    }
+
+    /* ---------- Sections ---------- */
+    section{
+      padding: 1.8rem 0 0.2rem;
+    }
+    .section-title{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:1rem;
+      margin-bottom: 0.85rem;
+    }
+    h2{
+      margin:0;
+      font-size: 1.35rem;
+      letter-spacing:.2px;
+    }
+    .sub{
       color: var(--muted);
-      font-size: 0.9rem;
+      font-size: .95rem;
+      margin: .15rem 0 0;
+      max-width: 70ch;
     }
-    .project-title {
-      font-weight: 600;
-      margin-bottom: 0.3rem;
+
+    /* ---------- Cards / Grid ---------- */
+    .grid{
+      display:grid;
+      gap: 1rem;
     }
-    footer {
-      max-width: 1080px;
-      margin: 2rem auto;
-      padding: 0 1.25rem 2rem;
-      font-size: 0.75rem;
-      color: #94a3b8;
+    .projects-grid{
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
-    a { color: var(--accent); }
+    @media (max-width: 980px){
+      .projects-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 650px){
+      .projects-grid{ grid-template-columns: 1fr; }
+    }
+
+    .card{
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1rem;
+      box-shadow: 0 8px 22px rgba(0,0,0,.25);
+      transition: transform .15s ease, border-color .15s ease;
+    }
+    .card:hover{
+      transform: translateY(-2px);
+      border-color: rgba(56,189,248,0.22);
+    }
+    .thumb{
+      width:100%;
+      height: 175px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.06);
+      object-fit: cover;
+      display:block;
+      margin-bottom: .75rem;
+      background: rgba(255,255,255,0.03);
+    }
+    .project-title{
+      font-weight: 800;
+      margin-bottom: .35rem;
+      letter-spacing:.2px;
+    }
+    .tagline{
+      color: var(--muted);
+      font-size: .9rem;
+      margin:0 0 .55rem;
+    }
+    .card p{
+      margin:0 0 .7rem;
+      color: var(--muted2);
+      font-size: .95rem;
+    }
+    .badges{
+      display:flex;
+      flex-wrap:wrap;
+      gap: .45rem;
+      margin: .2rem 0 .75rem;
+    }
+    .badge{
+      font-size:.78rem;
+      padding:.18rem .52rem;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,0.03);
+      color: var(--muted2);
+      white-space:nowrap;
+    }
+    .badge.ok{ border-color: rgba(34,197,94,0.22); }
+    .badge.blue{ border-color: rgba(56,189,248,0.22); }
+    .badge.warn{ border-color: rgba(245,158,11,0.25); }
+
+    .card .links{
+      display:flex;
+      gap:.65rem;
+      flex-wrap:wrap;
+      margin-top:.2rem;
+      font-size:.95rem;
+    }
+
+    /* ---------- Experience Timeline ---------- */
+    .timeline{
+      display:grid;
+      gap: .8rem;
+    }
+    .role{
+      display:grid;
+      gap:.35rem;
+      padding: 1rem;
+      border-radius: var(--radius);
+      background: var(--panel2);
+      border:1px solid var(--line);
+    }
+    .role-top{
+      display:flex;
+      justify-content:space-between;
+      gap:1rem;
+      flex-wrap:wrap;
+    }
+    .role-title{
+      font-weight: 800;
+      letter-spacing:.2px;
+    }
+    .role-meta{
+      color: var(--muted);
+      font-size:.92rem;
+      white-space:nowrap;
+    }
+    .role ul{
+      margin:.2rem 0 0;
+      padding-left: 1.1rem;
+      color: var(--muted2);
+    }
+    .role li{ margin:.25rem 0; }
+
+    /* ---------- Skills ---------- */
+    .skills{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+    @media (max-width: 900px){ .skills{ grid-template-columns: 1fr; } }
+    .skill-card{
+      background: var(--panel2);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1rem;
+    }
+    .skill-card h3{
+      margin:0 0 .45rem;
+      font-size: 1rem;
+    }
+    .skill-card .skill-list{
+      margin:0;
+      color: var(--muted2);
+    }
+
+    /* ---------- Gallery ---------- */
+    .gallery{
+      display:grid;
+      gap:.85rem;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    @media (max-width: 980px){ .gallery{ grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 520px){ .gallery{ grid-template-columns: 1fr; } }
+    .tile{
+      background: var(--panel2);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      padding: .55rem;
+    }
+    .tile img, .tile video{
+      width:100%;
+      border-radius: 12px;
+      max-height: 180px;
+      object-fit: cover;
+      display:block;
+      background: rgba(255,255,255,0.03);
+    }
+    .cap{
+      font-size:.78rem;
+      color: var(--muted);
+      margin:.45rem 0 .15rem;
+    }
+
+    /* ---------- Footer ---------- */
+    footer{
+      padding: 2.2rem 0 2.8rem;
+      color: var(--muted);
+      font-size: .82rem;
+    }
+
+    /* nice section divider */
+    .divider{
+      height:1px;
+      background: var(--line);
+      margin: 1.6rem 0 0.2rem;
+    }
   </style>
 </head>
+
 <body>
-
-<header>
-  <div style="font-weight:700;">Harish Geetha Mohan</div>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#experience">Experience</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
-
-<!-- ORIGINAL INTRO (RESTORED) -->
-<section class="hero">
-  <h1>Mechanical Engineer — Manufacturing, Robotics, AI for Science</h1>
-  <p>
-    M.S. Mechanical Engineering & Applied Mechanics (MEAM), University of Pennsylvania.
-    I’m interested in the intersection of mechanical engineering and AI — using learning-based methods to speed up
-    simulation, process optimization, and materials/manufacturing workflows. Most of my earlier work is hands-on
-    mechanical design and FEA; now I’m layering AI-for-science ideas on top of that.
-  </p>
-  <a class="btn" href="Harish_Resume.pdf" target="_blank">Download Resume</a>
-</section>
-
-<!-- ORIGINAL ABOUT SECTION (RESTORED) -->
-<section id="about">
-  <h2>About</h2>
-  <p>
-    I like projects that go model → simulate → build → test. I’ve done that in BAJA (PSI Racing), in additive
-    manufacturing simulations, and now I’m starting to do it for UAV hardware and neural-operator style models for WAAM.
-  </p>
-</section>
-
-<section id="projects">
-  <h2>Selected Projects</h2>
-  <div class="grid projects-grid">
-
-    <!-- PSI Racing -->
-    <div class="card">
-      <img src="psi-baja.png" alt="PSI Racing BAJA ATV"
-           style="width:100%; max-height:200px; object-fit:cover; border-radius:0.5rem; margin-bottom:0.6rem;">
-      <div class="project-title">PSI Racing – Suspension & Steering Subsystem</div>
-      <p class="tagline">NIT Trichy • Design, validation, manufacturability</p>
-      <p>
-        Designed and validated BAJA ATV components that could actually be made in the campus workshop.
-        Modeled in PTC Creo and ran ANSYS Workbench checks for steering, cornering and knuckle loads to stay inside SAE BAJA limits.
-      </p>
-      <p><strong>Highlights:</strong> CAD, FEA, vehicle-level validation</p>
+  <div class="topbar">
+    <div class="container">
+      <header>
+        <div class="brand">
+          <span class="dot"></span>
+          <span>Harish Geetha Mohan</span>
+        </div>
+        <nav aria-label="Primary navigation">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
     </div>
-
-    <!-- PINN of LMD -->
-    <div class="card">
-      <div class="project-title">PINN of LMD (Laser Metal Deposition)</div>
-      <p class="tagline">PyTorch • Physics-Informed ML • Additive</p>
-      <p>
-        Built a PINN to predict 3D temperature fields in LMD by enforcing the heat-transfer PDE and realistic laser boundary
-        conditions directly in the loss. Compared against FEM / literature to keep solutions physical.
-      </p>
-      <p>
-        <strong>Code:</strong>
-        <a href="https://github.com/gmharish190403/LMD_OPT/tree/main" target="_blank">
-          github.com/gmharish190403/LMD_OPT
-        </a>
-      </p>
-    </div>
-
-    <!-- MR Clutch -->
-    <div class="card">
-      <img src="mr-clutch-exploded.png" alt="MR clutch exploded view"
-           style="width:100%; max-height:200px; object-fit:cover; border-radius:0.5rem; margin-bottom:0.6rem;">
-      <div class="project-title">Magnetorheological Clutch – Control & Testing</div>
-      <p class="tagline">Western University, Canada • Research</p>
-      <p>
-        Designed and tested a mini MR clutch with a planetary layout and instrumented it with Arduino Mega 2560 to acquire speed/torque.
-        Validated the model with experimental runs.
-      </p>
-    </div>
-
-    <!-- WAAM -->
-    <div class="card">
-      <img src="waam.png" alt="WAAM simulation optimization"
-           style="width:100%; max-height:200px; object-fit:cover; border-radius:0.5rem; margin-bottom:0.6rem;">
-      <div class="project-title">Optimization of Wire Arc Additive Manufacturing</div>
-      <p class="tagline">NIT Trichy • Simufact Welding</p>
-      <p>
-        Simulated WAAM to study distortion and residual stress across multi-layer beads and tuned process parameters for better stability.
-      </p>
-    </div>
-
-    <!-- Coaxial UAV Motor Mount -->
-    <div class="card">
-      <img src="motor_mount.png" alt="Coaxial UAV Motor Mount CAD"
-           style="width:100%; max-height:200px; object-fit:cover; border-radius:0.5rem; margin-bottom:0.6rem;">
-      <div class="project-title">Coaxial UAV Motor Mount (in progress)</div>
-      <p class="tagline">Penn UAV Lab • hardware under work</p>
-      <p>
-        Early design of a mount to connect a brushless motor to a carbon tube in a coaxial stack.
-        Currently working through clamp geometry and fastener access so it can be 3D printed / machined quickly for lab tests.
-      </p>
-    </div>
-
-    <!-- PINO for WAAM -->
-    <div class="card">
-      <div class="project-title">PINO for WAAM (in progress)</div>
-      <p class="tagline">Neural operators • AI for science • course project</p>
-      <p>
-        Building a Physics-Informed Neural Operator for Wire Arc Additive Manufacturing to solve reverse / parameter-identification problems
-        faster than running full simulations. Part of an AI-for-science style course — still being developed.
-      </p>
-    </div>
-
   </div>
 
-  <h3 style="margin-top:2rem; font-size:1.05rem;">Gallery — Simulations, Prototypes & Testing</h3>
-  <div style="display:grid; gap:0.8rem; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));">
+  <main class="container">
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-card">
+        <div class="kicker">
+          <span class="pill">M.S. MEAM @ UPenn</span>
+          <span class="pill">Mechanical Design</span>
+          <span class="pill">Manufacturing + Robotics</span>
+        </div>
 
-    <div style="background:#111827; border:1px solid rgba(255,255,255,0.03); border-radius:0.5rem; padding:0.5rem;">
-      <img src="psi-fea-chassis.png" alt="BAJA FEA results"
-           style="width:100%; max-height:180px; object-fit:cover; border-radius:0.4rem;">
-      <p style="font-size:0.75rem; color:#94a3b8; margin-top:0.4rem;">
-        BAJA chassis and steering FEA — Von Mises stress distribution for impact and rollover.
+        <h1>Mechanical Engineer building real hardware — and the models behind it.</h1>
+        <p>
+          I like work that goes <b>model → simulate → build → test</b>.
+          I’ve designed and validated hardware for BAJA, worked on additive manufacturing simulation/optimization,
+          and I’m currently developing and testing <b>3D-printed metal UAV hardware</b> in a research lab setting.
+        </p>
+
+        <div class="cta-row">
+          <!-- Update filename to whatever you host -->
+          <a class="btn primary" href="Harish_Resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn" href="https://github.com/gmharish190403" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+
+      <div class="hero-side">
+        <div class="mini">
+          <h3>Currently</h3>
+          <ul>
+            <li>UAV coaxial conversion motor-mount (metal 3D printed)</li>
+            <li>Design iteration + analysis + shop-ready documentation</li>
+            <li>Simulation-driven additive manufacturing projects</li>
+          </ul>
+        </div>
+
+        <div class="mini">
+          <h3>Links</h3>
+          <div class="links">
+            <a href="mailto:harishgm@seas.upenn.edu">📩 harishgm@seas.upenn.edu</a>
+            <a href="https://www.linkedin.com/in/harish-geetha-mohan-b02b20213/" target="_blank" rel="noopener">🔗 LinkedIn</a>
+            <a href="https://gmharish190403.github.io/Harish_GeethaMohan.github.io/" target="_blank" rel="noopener">🌐 Portfolio</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="section-title">
+        <div>
+          <h2>About</h2>
+          <p class="sub">
+            I’m focused on mechanical design and manufacturing, especially systems that need both
+            solid analysis and practical build/test iteration.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid" style="grid-template-columns: 1.15fr .85fr; gap:1rem;">
+        <div class="card">
+          <p>
+            My background started with hands-on mechanical engineering: CAD, FEA, fabrication, and test feedback.
+            Over time I started adding simulation-driven optimization and AI-for-science methods to move faster — without losing
+            the “build reality check.”
+          </p>
+          <p style="margin-bottom:0;">
+            I enjoy teams that move quickly, document decisions clearly, and care about reliability, manufacturability, and clean design.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="project-title">Quick facts</div>
+          <div class="badges">
+            <span class="badge blue">CAD + FEA</span>
+            <span class="badge ok">Build/Test</span>
+            <span class="badge warn">Additive</span>
+          </div>
+          <p style="margin-bottom:.55rem;"><b>Core tools:</b> SolidWorks, Creo, ANSYS, Abaqus, MATLAB</p>
+          <p style="margin-bottom:0;"><b>Also:</b> Python (for analysis + ML), shop-floor DFM mindset</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="section-title">
+        <div>
+          <h2>Selected Projects</h2>
+          <p class="sub">A few projects that best represent how I work: design, validate, build, iterate.</p>
+        </div>
+      </div>
+
+      <div class="grid projects-grid">
+        <!-- PSI Racing -->
+        <article class="card">
+          <img class="thumb" src="psi-baja.png" alt="PSI Racing BAJA ATV" loading="lazy">
+          <div class="project-title">PSI Racing – Suspension & Steering (BAJA SAE)</div>
+          <p class="tagline">NIT Trichy • Design, validation, fabrication & testing</p>
+          <div class="badges">
+            <span class="badge blue">PTC Creo</span>
+            <span class="badge blue">ANSYS</span>
+            <span class="badge ok">Vehicle Testing</span>
+          </div>
+          <p>
+            Designed and validated suspension & steering components with real build constraints.
+            Iterated based on test feedback and failures, balancing weight, strength, and manufacturability.
+          </p>
+          <div class="links">
+            <!-- add if you have a write-up or PDF -->
+            <!-- <a href="baja-report.pdf" target="_blank" rel="noopener">Report</a> -->
+          </div>
+        </article>
+
+        <!-- UAV Coaxial Motor Mount -->
+        <article class="card">
+          <img class="thumb" src="motor_mount.png" alt="Coaxial UAV Motor Mount CAD" loading="lazy">
+          <div class="project-title">Coaxial UAV Motor-Mount (Metal 3D Printed)</div>
+          <p class="tagline">UPenn • Hardware design + analysis + iteration</p>
+          <div class="badges">
+            <span class="badge blue">SolidWorks</span>
+            <span class="badge blue">Load-path / FEA</span>
+            <span class="badge warn">Metal AM</span>
+          </div>
+          <p>
+            Designing a motor-mount adapter to convert a single-motor propulsion system into a dual-motor coaxial configuration.
+            Focus: stiffness, alignment, fastener access, and manufacturability for metal AM.
+          </p>
+        </article>
+
+        <!-- WAAM Optimization -->
+        <article class="card">
+          <img class="thumb" src="waam.png" alt="WAAM simulation optimization" loading="lazy">
+          <div class="project-title">WAAM Optimization (Simufact)</div>
+          <p class="tagline">NIT Trichy • Residual stress & distortion reduction</p>
+          <div class="badges">
+            <span class="badge blue">Simufact</span>
+            <span class="badge blue">FEA</span>
+            <span class="badge ok">Validation</span>
+          </div>
+          <p>
+            Simulated WAAM builds to understand distortion and residual stress, then tuned parameters to improve stability.
+            Validated improvements through manufacturing + measurement.
+          </p>
+        </article>
+
+        <!-- PINN of LMD -->
+        <article class="card">
+          <!-- If you have a nice thermal plot image, replace thumb -->
+          <img class="thumb" src="lmd_thermal.png" alt="LMD thermal modeling" loading="lazy"
+               onerror="this.style.display='none'">
+          <div class="project-title">Thermal Modeling for LMD (PINN-style)</div>
+          <p class="tagline">PyTorch • Physics-based learning for heat transfer</p>
+          <div class="badges">
+            <span class="badge blue">Python</span>
+            <span class="badge blue">Heat Transfer</span>
+            <span class="badge ok">Benchmarking</span>
+          </div>
+          <p>
+            Built physics-constrained models to predict temperature fields under moving heat sources and realistic boundary conditions.
+            Compared against FEM / literature to keep solutions physical.
+          </p>
+          <div class="links">
+            <a href="https://github.com/gmharish190403/LMD_OPT/tree/main" target="_blank" rel="noopener">Code</a>
+          </div>
+        </article>
+
+        <!-- MR Clutch -->
+        <article class="card">
+          <img class="thumb" src="mr-clutch-exploded.png" alt="MR clutch exploded view" loading="lazy">
+          <div class="project-title">Magnetorheological Clutch – Control & Testing</div>
+          <p class="tagline">Western University (MITACS) • Prototype + instrumentation</p>
+          <div class="badges">
+            <span class="badge blue">Mechatronics</span>
+            <span class="badge ok">Test Bench</span>
+            <span class="badge blue">Arduino</span>
+          </div>
+          <p>
+            Designed and tested a mini MR clutch and built an instrumented bench for torque/speed/current sensing.
+            Used real experimental data to validate model behavior.
+          </p>
+        </article>
+
+        <!-- PINO / Neural Operator WAAM -->
+        <article class="card">
+          <div class="project-title">Neural-Operator for WAAM (in progress)</div>
+          <p class="tagline">AI for science • faster parameter identification</p>
+          <div class="badges">
+            <span class="badge blue">Python</span>
+            <span class="badge blue">Operators</span>
+            <span class="badge warn">Manufacturing</span>
+          </div>
+          <p>
+            Building operator-style models to accelerate WAAM simulations for optimization and inverse design.
+            Goal: reduce compute while preserving physically meaningful predictions.
+          </p>
+        </article>
+      </div>
+
+      <h3 style="margin-top:1.7rem; font-size:1.05rem; letter-spacing:.2px;">Gallery</h3>
+      <p class="sub" style="margin-top:.2rem;">
+        Testing, prototypes, simulations — a quick visual skim.
       </p>
-    </div>
 
-    <div style="background:#111827; border:1px solid rgba(255,255,255,0.03); border-radius:0.5rem; padding:0.5rem;">
-      <img src="mr-clutch-test.png" alt="MR clutch testing setup"
-           style="width:100%; max-height:180px; object-fit:cover; border-radius:0.4rem;">
-      <p style="font-size:0.75rem; color:#94a3b8; margin-top:0.4rem;">
-        Experimental setup for MR clutch — torque and speed acquisition with embedded sensors.
-      </p>
-    </div>
+      <div class="gallery" style="margin-top:.8rem;">
+        <div class="tile">
+          <img src="psi-fea-chassis.png" alt="BAJA FEA results" loading="lazy">
+          <div class="cap">BAJA FEA — stress distribution for key load cases.</div>
+        </div>
+        <div class="tile">
+          <img src="mr-clutch-test.png" alt="MR clutch testing setup" loading="lazy">
+          <div class="cap">MR clutch test setup — torque & speed acquisition.</div>
+        </div>
+        <div class="tile">
+          <video src="crash.mp4" controls preload="metadata"></video>
+          <div class="cap">PSI Racing — testing clip.</div>
+        </div>
+        <div class="tile">
+          <img src="drone.png" alt="Penn UAV test rig" loading="lazy">
+          <div class="cap">UAV lab — test rig relevant to mount work.</div>
+        </div>
+      </div>
+    </section>
 
-    <div style="background:#111827; border:1px solid rgba(255,255,255,0.03); border-radius:0.5rem; padding:0.5rem;">
-      <video src="crash.mp4" controls style="width:100%; border-radius:0.4rem; max-height:200px; object-fit:cover;"></video>
-      <p style="font-size:0.75rem; color:#94a3b8; margin-top:0.4rem;">PSI Racing — crash during testing.</p>
-    </div>
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="section-title">
+        <div>
+          <h2>Experience</h2>
+          <p class="sub">A quick timeline of the work that shaped how I design and validate hardware.</p>
+        </div>
+      </div>
 
-    <div style="background:#111827; border:1px solid rgba(255,255,255,0.03); border-radius:0.5rem; padding:0.5rem;">
-      <img src="drone.png" alt="Penn UAV motor test rig"
-           style="width:100%; max-height:200px; object-fit:cover; border-radius:0.4rem;">
-      <p style="font-size:0.75rem; color:#94a3b8; margin-top:0.4rem;">
-        Penn UAV lab — early motor/thrust test rig connected to the coaxial mount work.
-      </p>
-    </div>
+      <div class="timeline">
+        <div class="role">
+          <div class="role-top">
+            <div class="role-title">Research Assistant — UAV Hardware Design & Assembly (UPenn)</div>
+            <div class="role-meta">Nov 2025 – Present</div>
+          </div>
+          <ul>
+            <li>Designing and iterating metal 3D-printed motor-mount hardware for a coaxial UAV conversion.</li>
+            <li>Load-path thinking + structural checks to guide iteration and build-ready geometry decisions.</li>
+          </ul>
+        </div>
 
-  </div>
-</section>
+        <div class="role">
+          <div class="role-top">
+            <div class="role-title">Trainee — Finlay CNC Centre (CNC + DFM exposure)</div>
+            <div class="role-meta">Jul 2024 – Feb 2025</div>
+          </div>
+          <ul>
+            <li>Hands-on exposure to turning/milling/drilling workflows, setup constraints, and inspection basics.</li>
+            <li>Learned practical DFM tradeoffs and how tolerances show up in real builds.</li>
+          </ul>
+        </div>
 
-<section id="experience">
-  <h2>Experience</h2>
+        <div class="role">
+          <div class="role-top">
+            <div class="role-title">Research Intern — MR Clutch (MITACS), Western University</div>
+            <div class="role-meta">May 2023 – Aug 2023</div>
+          </div>
+          <ul>
+            <li>Built a test bench + instrumentation pipeline for torque/speed/current measurements.</li>
+            <li>Validated prototype behavior experimentally and refined model understanding from data.</li>
+          </ul>
+        </div>
 
-  <div class="card" style="margin-top:1rem;">
-    <strong>Finlay CNC Centre, Tiruchirappalli, India</strong> — Aug 2024 – Oct 2024<br />
-    <span class="tagline">CNC machining • Hands-on fabrication</span>
-    <p>
-      Trained on CNC milling, drilling, and turning operations, machining aluminum components and learning DFM principles on the shop floor.
-    </p>
-  </div>
+        <div class="role">
+          <div class="role-top">
+            <div class="role-title">Research Intern — MR Damper Valve, IIT Madras</div>
+            <div class="role-meta">May 2022 – Jul 2022</div>
+          </div>
+          <ul>
+            <li>Modeled MR suspension behavior in MATLAB/Simulink and supported optimization with ANSYS magnetostatics.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-  <div class="card" style="margin-top:1rem;">
-    <strong>Research Intern, IIT Madras, India</strong> — May 2022 – May 2024<br />
-    <span class="tagline">Suspension modeling • Simulink</span>
-    <p>
-      Modeled a quarter-car suspension in MATLAB/Simulink and analyzed ride comfort and handling using RSM.
-    </p>
-  </div>
-</section>
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="section-title">
+        <div>
+          <h2>Skills</h2>
+          <p class="sub">Tools and strengths that show up repeatedly across my projects.</p>
+        </div>
+      </div>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:harishgm@seas.upenn.edu">harishgm@seas.upenn.edu</a></p>
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/harish-geetha-mohan-b02b20213/" target="_blank">linkedin.com/in/harish-geetha-mohan-b02b20213</a></p>
-  <p>GitHub: <a href="https://github.com/gmharish190403" target="_blank">github.com/gmharish190403</a></p>
-  <p>Location: Philadelphia, PA</p>
-</section>
+      <div class="skills">
+        <div class="skill-card">
+          <h3>Design & CAD</h3>
+          <div class="skill-list">SolidWorks • PTC Creo • AutoCAD • Rhino 7</div>
+        </div>
 
-<footer>
-  © 2025 Harish Geetha Mohan — Mechanical Engineering & Applied Mechanics | University of Pennsylvania
-</footer>
+        <div class="skill-card">
+          <h3>Simulation</h3>
+          <div class="skill-list">ANSYS Workbench • Abaqus • MATLAB/Simulink • Simufact</div>
+        </div>
 
+        <div class="skill-card">
+          <h3>Programming & Data</h3>
+          <div class="skill-list">Python • MATLAB • C/C++ • Arduino</div>
+        </div>
+
+        <div class="skill-card">
+          <h3>Manufacturing</h3>
+          <div class="skill-list">CNC machining basics • DFM • Metal additive manufacturing • Prototyping</div>
+        </div>
+
+        <div class="skill-card">
+          <h3>Engineering Workflow</h3>
+          <div class="skill-list">Load-path thinking • Test/iterate mindset • Clear documentation</div>
+        </div>
+
+        <div class="skill-card">
+          <h3>Interests</h3>
+          <div class="skill-list">Robotics hardware • Additive manufacturing • Simulation acceleration (AI-for-science)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="section-title">
+        <div>
+          <h2>Contact</h2>
+          <p class="sub">If you’re hiring for mechanical design/manufacturing or robotics hardware, I’d love to connect.</p>
+        </div>
+      </div>
+
+      <div class="grid" style="grid-template-columns: 1fr 1fr; gap:1rem;">
+        <div class="card">
+          <p style="margin:0 0 .55rem;"><b>Email</b><br>
+            <a href="mailto:harishgm@seas.upenn.edu">harishgm@seas.upenn.edu</a>
+          </p>
+          <p style="margin:0 0 .55rem;"><b>LinkedIn</b><br>
+            <a href="https://www.linkedin.com/in/harish-geetha-mohan-b02b20213/" target="_blank" rel="noopener">
+              linkedin.com/in/harish-geetha-mohan-b02b20213
+            </a>
+          </p>
+          <p style="margin:0;"><b>GitHub</b><br>
+            <a href="https://github.com/gmharish190403" target="_blank" rel="noopener">github.com/gmharish190403</a>
+          </p>
+        </div>
+
+        <div class="card">
+          <p style="margin:0 0 .55rem;"><b>Location</b><br>Philadelphia, PA</p>
+          <p style="margin:0;"><b>Resume</b><br>
+            <a href="Harish_Resume.pdf" target="_blank" rel="noopener">Download PDF</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © 2026 Harish Geetha Mohan — Mechanical Engineering & Applied Mechanics | University of Pennsylvania
+    </footer>
+  </main>
 </body>
 </html>
