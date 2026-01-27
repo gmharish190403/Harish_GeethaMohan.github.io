@@ -158,14 +158,17 @@
     }
     .card:hover{transform:translateY(-2px); border-color:rgba(56,189,248,0.22)}
 
-    ..media {
-  width: 100%;
-  height: auto;
-  max-height: 320px;
-  object-fit: contain;
-  border-radius: 12px;
-  background: rgba(226,232,240,0.04);
-}
+    /* FIXED: Changed ..media to .media */
+    .media {
+      width: 100%;
+      height: auto;
+      max-height: 320px;
+      object-fit: contain;
+      border-radius: 12px;
+      background: rgba(226,232,240,0.04);
+      margin-bottom: 0.75rem;
+      display: block;
+    }
 
     .fallback{
       display:none;
@@ -326,7 +329,7 @@
       <p class="sub">
         I like engineering that is measurable: you design something, analyze it, build it, test it, then iterate.
         That mindset came from BAJA fabrication, shop-floor exposure in CNC, and research projects where validation matters.
-        Now I’m applying it to robotics hardware and physics-driven ML for manufacturing.
+        Now I'm applying it to robotics hardware and physics-driven ML for manufacturing.
       </p>
     </section>
 
@@ -334,7 +337,7 @@
     <section id="courses">
       <h2>Courses</h2>
       <p class="sub">
-        Current focus is mechanics + robotics + AI-for-science. Here are the courses shaping what I’m building right now.
+        Current focus is mechanics + robotics + AI-for-science. Here are the courses shaping what I'm building right now.
       </p>
 
       <div class="grid course-grid">
@@ -556,7 +559,7 @@
     <!-- CONTACT -->
     <section id="contact">
       <h2>Contact</h2>
-      <p class="sub">Email is best. I’m also active on LinkedIn.</p>
+      <p class="sub">Email is best. I'm also active on LinkedIn.</p>
       <p>Email: <a href="mailto:harishgm@seas.upenn.edu">harishgm@seas.upenn.edu</a></p>
       <p>LinkedIn: <a href="https://www.linkedin.com/in/harish-geetha-mohan-b02b20213/" target="_blank" rel="noopener">linkedin.com/in/harish-geetha-mohan-b02b20213</a></p>
       <p>GitHub: <a href="https://github.com/gmharish190403" target="_blank" rel="noopener">github.com/gmharish190403</a></p>
