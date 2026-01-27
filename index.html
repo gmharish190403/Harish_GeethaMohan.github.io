@@ -2,288 +2,250 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Harish Geetha Mohan | Mechanical Engineer</title>
+  <title>Harish Geetha Mohan | Mechanical Engineering | Manufacturing, Robotics, AI for Science</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Harish Geetha Mohan — Mechanical Engineer (M.S. MEAM, University of Pennsylvania) exploring manufacturing, robotics, and AI for science." />
+  <meta name="description" content="Harish Geetha Mohan — M.S. Mechanical Engineering (UPenn). Manufacturing + robotics hardware + AI-for-science (PINNs/PINO). Design → build → test mindset." />
 
   <style>
-    :root {
-      --bg: #0f172a;
-      --card: #111827;
-      --card2: rgba(17,24,39,0.7);
-      --text: #e2e8f0;
-      --muted: #94a3b8;
-      --accent: #38bdf8;
-      --line: rgba(226,232,240,0.08);
-      --shadow: 0 12px 30px rgba(0,0,0,0.35);
-      --radius: 14px;
+    :root{
+      --bg:#0f172a;
+      --card:#111827;
+      --card2:rgba(17,24,39,0.7);
+      --text:#e2e8f0;
+      --muted:#94a3b8;
+      --accent:#38bdf8;
+      --line:rgba(226,232,240,0.08);
+      --shadow:0 12px 30px rgba(0,0,0,0.35);
+      --radius:14px;
     }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
       background:
         radial-gradient(1000px 500px at 75% -10%, rgba(56,189,248,0.18), transparent 55%),
         radial-gradient(900px 500px at 15% 0%, rgba(56,189,248,0.10), transparent 60%),
         var(--bg);
-      color: var(--text);
-      line-height: 1.55;
+      color:var(--text);
+      line-height:1.55;
     }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
 
-    .container { max-width: 1080px; margin: 0 auto; padding: 0 1.25rem; }
+    .container{max-width:1080px;margin:0 auto;padding:0 1.25rem}
 
     /* ---------- Sticky Nav ---------- */
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      backdrop-filter: blur(10px);
-      background: rgba(15,23,42,0.72);
-      border-bottom: 1px solid var(--line);
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter:blur(10px);
+      background:rgba(15,23,42,0.72);
+      border-bottom:1px solid var(--line);
     }
-    header {
-      padding: 0.95rem 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      flex-wrap: wrap;
+    header{
+      padding:0.95rem 0;
+      display:flex; align-items:center; justify-content:space-between;
+      gap:1rem; flex-wrap:wrap;
     }
-    .brand {
-      font-weight: 800;
-      letter-spacing: 0.2px;
-      display: flex;
-      align-items: center;
-      gap: 0.55rem;
-      white-space: nowrap;
+    .brand{
+      font-weight:800;
+      letter-spacing:0.2px;
+      display:flex; align-items:center; gap:0.55rem;
+      white-space:nowrap;
     }
-    .brand-dot {
-      width: 10px; height: 10px; border-radius: 999px;
-      background: var(--accent);
-      box-shadow: 0 0 18px rgba(56,189,248,0.55);
-      flex: 0 0 auto;
+    .brand-dot{
+      width:10px;height:10px;border-radius:999px;
+      background:var(--accent);
+      box-shadow:0 0 18px rgba(56,189,248,0.55);
+      flex:0 0 auto;
     }
-    nav { display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: flex-end; }
-    nav a {
-      color: var(--text);
-      text-decoration: none;
-      font-size: 0.92rem;
-      padding: 0.35rem 0.55rem;
-      border-radius: 10px;
-      opacity: 0.92;
+    nav{display:flex;gap:0.75rem;flex-wrap:wrap;justify-content:flex-end}
+    nav a{
+      color:var(--text);
+      font-size:0.92rem;
+      padding:0.35rem 0.55rem;
+      border-radius:10px;
+      opacity:0.92;
     }
-    nav a:hover {
-      background: rgba(226,232,240,0.06);
-      text-decoration: none;
-      opacity: 1;
+    nav a:hover{
+      background:rgba(226,232,240,0.06);
+      text-decoration:none; opacity:1;
     }
 
     /* ---------- Hero ---------- */
-    .hero {
-      padding: 2.6rem 0 1.4rem;
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 1rem;
-      align-items: start;
+    .hero{
+      padding:2.4rem 0 1.2rem;
+      display:grid;
+      grid-template-columns:1.2fr 0.8fr;
+      gap:1rem;
+      align-items:start;
     }
-    @media (max-width: 900px) { .hero { grid-template-columns: 1fr; } }
+    @media (max-width:900px){ .hero{grid-template-columns:1fr} }
 
-    .panel {
-      background: rgba(17,24,39,0.72);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 1.2rem;
-    }
-    .hero h1 {
-      font-size: clamp(2.15rem, 5vw, 3rem);
-      line-height: 1.08;
-      margin: 0.15rem 0 0.55rem;
-      letter-spacing: 0.2px;
-    }
-    .hero p { margin: 0 0 1rem; color: var(--muted); max-width: 64ch; }
-
-    .pill-row { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-bottom: 0.65rem; }
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.22rem 0.55rem;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      background: rgba(226,232,240,0.04);
-      color: var(--muted);
-      font-size: 0.82rem;
-      white-space: nowrap;
+    .panel{
+      background:rgba(17,24,39,0.72);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:1.2rem;
     }
 
-    .cta { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 0.2rem; }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.62rem 1rem;
-      border-radius: 12px;
-      font-weight: 700;
-      text-decoration: none;
-      border: 1px solid var(--line);
-      background: rgba(226,232,240,0.04);
-      color: var(--text);
+    .hero h1{
+      font-size:clamp(2.1rem, 5vw, 3rem);
+      line-height:1.08;
+      margin:0.15rem 0 0.55rem;
+      letter-spacing:0.2px;
     }
-    .btn:hover { text-decoration: none; filter: brightness(1.05); }
-    .btn.primary { background: var(--accent); border-color: transparent; color: #07101f; }
-    .btn.primary:hover { filter: brightness(1.02); }
+    .hero p{margin:0 0 1rem; color:var(--muted); max-width:68ch}
 
-    .mini h3 { margin: 0 0 0.45rem; font-size: 1rem; }
-    .mini ul { margin: 0.25rem 0 0; padding-left: 1.1rem; color: var(--muted); }
-    .mini li { margin: 0.28rem 0; }
-    .links { display: grid; gap: 0.5rem; margin-top: 0.65rem; }
-    .links a {
-      display: inline-flex; gap: 0.5rem; align-items: center;
-      padding: 0.4rem 0.55rem;
-      border-radius: 10px;
+    .pill-row{display:flex;flex-wrap:wrap;gap:0.45rem;margin-bottom:0.65rem}
+    .pill{
+      display:inline-flex; align-items:center; gap:0.4rem;
+      padding:0.22rem 0.55rem;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(226,232,240,0.04);
+      color:var(--muted);
+      font-size:0.82rem;
+      white-space:nowrap;
     }
-    .links a:hover { background: rgba(226,232,240,0.06); text-decoration: none; }
+
+    .cta{display:flex;flex-wrap:wrap;gap:0.7rem;margin-top:0.2rem}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:0.62rem 1rem;
+      border-radius:12px;
+      font-weight:700;
+      border:1px solid var(--line);
+      background:rgba(226,232,240,0.04);
+      color:var(--text);
+      text-decoration:none;
+    }
+    .btn:hover{text-decoration:none; filter:brightness(1.05)}
+    .btn.primary{background:var(--accent); border-color:transparent; color:#07101f}
+    .btn.primary:hover{filter:brightness(1.02)}
+
+    .mini h3{margin:0 0 0.45rem; font-size:1rem}
+    .links{display:grid; gap:0.5rem; margin-top:0.65rem}
+    .links a{
+      display:inline-flex; gap:0.5rem; align-items:center;
+      padding:0.4rem 0.55rem;
+      border-radius:10px;
+    }
+    .links a:hover{background:rgba(226,232,240,0.06); text-decoration:none}
+    .mini ul{margin:0.35rem 0 0; padding-left:1.1rem; color:var(--muted)}
+    .mini li{margin:0.28rem 0}
 
     /* ---------- Sections ---------- */
-    section { padding: 1.9rem 0 0.6rem; }
-    h2 { margin: 0 0 0.65rem; font-size: 1.35rem; letter-spacing: 0.2px; }
-    .sub { color: var(--muted); margin: 0 0 1rem; max-width: 75ch; }
+    section{padding:1.9rem 0 0.6rem}
+    h2{margin:0 0 0.65rem; font-size:1.35rem; letter-spacing:0.2px}
+    .sub{color:var(--muted); margin:0 0 1rem; max-width:80ch}
 
     /* ---------- Cards / Grid ---------- */
-    .grid { display: grid; gap: 1rem; }
-    .projects-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    @media (max-width: 980px) { .projects-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-    @media (max-width: 650px) { .projects-grid { grid-template-columns: 1fr; } }
+    .grid{display:grid; gap:1rem}
+    .projects-grid{grid-template-columns:repeat(3, minmax(0, 1fr))}
+    @media (max-width:980px){ .projects-grid{grid-template-columns:repeat(2, minmax(0, 1fr))} }
+    @media (max-width:650px){ .projects-grid{grid-template-columns:1fr} }
 
-    .card {
-      background: rgba(17,24,39,0.72);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: 0 10px 26px rgba(0,0,0,0.25);
-      padding: 1rem;
-      transition: transform 0.15s ease, border-color 0.15s ease;
-      overflow: hidden;
+    .card{
+      background:rgba(17,24,39,0.72);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:0 10px 26px rgba(0,0,0,0.25);
+      padding:1rem;
+      transition:transform 0.15s ease, border-color 0.15s ease;
+      overflow:hidden;
     }
-    .card:hover { transform: translateY(-2px); border-color: rgba(56,189,248,0.22); }
+    .card:hover{transform:translateY(-2px); border-color:rgba(56,189,248,0.22)}
 
-    /* Uniform media */
-    .media {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      border-radius: 12px;
-      border: 1px solid rgba(226,232,240,0.08);
-      background: rgba(226,232,240,0.04);
-      object-fit: cover;
-      display: block;
-      margin-bottom: 0.75rem;
+    .media{
+      width:100%;
+      aspect-ratio:16 / 9;
+      border-radius:12px;
+      border:1px solid rgba(226,232,240,0.08);
+      background:rgba(226,232,240,0.04);
+      object-fit:cover;
+      display:block;
+      margin-bottom:0.75rem;
     }
-
-    /* fallback box if an image fails to load */
-    .fallback {
-      display: none;
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      border-radius: 12px;
-      border: 1px dashed rgba(226,232,240,0.18);
-      background: rgba(226,232,240,0.04);
-      margin-bottom: 0.75rem;
-      padding: 0.9rem;
-      color: var(--muted);
-      font-size: 0.9rem;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
+    .fallback{
+      display:none;
+      width:100%;
+      aspect-ratio:16 / 9;
+      border-radius:12px;
+      border:1px dashed rgba(226,232,240,0.18);
+      background:rgba(226,232,240,0.04);
+      margin-bottom:0.75rem;
+      padding:0.9rem;
+      color:var(--muted);
+      font-size:0.9rem;
+      align-items:center; justify-content:center;
+      text-align:center;
     }
 
-    .project-title { font-weight: 800; margin: 0 0 0.25rem; letter-spacing: 0.2px; }
-    .tagline { color: var(--muted); font-size: 0.9rem; margin: 0 0 0.55rem; }
+    .project-title{font-weight:800; margin:0 0 0.25rem; letter-spacing:0.2px}
+    .tagline{color:var(--muted); font-size:0.9rem; margin:0 0 0.55rem}
 
-    .badges { display: flex; flex-wrap: wrap; gap: 0.45rem; margin: 0 0 0.65rem; }
-    .badge {
-      font-size: 0.78rem;
-      padding: 0.18rem 0.52rem;
-      border-radius: 999px;
-      border: 1px solid rgba(226,232,240,0.14);
-      background: rgba(226,232,240,0.04);
-      color: var(--muted);
-      white-space: nowrap;
+    .badges{display:flex; flex-wrap:wrap; gap:0.45rem; margin:0 0 0.65rem}
+    .badge{
+      font-size:0.78rem;
+      padding:0.18rem 0.52rem;
+      border-radius:999px;
+      border:1px solid rgba(226,232,240,0.14);
+      background:rgba(226,232,240,0.04);
+      color:var(--muted);
+      white-space:nowrap;
     }
 
-    .card p { margin: 0 0 0.65rem; color: #cbd5e1; font-size: 0.95rem; }
-    .impact { margin: 0.2rem 0 0; padding-left: 1.1rem; color: var(--muted); }
-    .impact li { margin: 0.22rem 0; }
+    .card p{margin:0 0 0.65rem; color:#cbd5e1; font-size:0.95rem}
+    .impact{margin:0.2rem 0 0; padding-left:1.1rem; color:var(--muted)}
+    .impact li{margin:0.22rem 0}
 
-    .card .links-row {
-      display: flex;
-      gap: 0.75rem;
-      flex-wrap: wrap;
-      margin-top: 0.55rem;
-      font-size: 0.95rem;
+    .links-row{
+      display:flex; gap:0.75rem; flex-wrap:wrap;
+      margin-top:0.55rem; font-size:0.95rem;
     }
-    .links-row a {
-      padding: 0.35rem 0.55rem;
-      border-radius: 10px;
-    }
-    .links-row a:hover { background: rgba(226,232,240,0.06); text-decoration: none; }
+    .links-row a{padding:0.35rem 0.55rem; border-radius:10px}
+    .links-row a:hover{background:rgba(226,232,240,0.06); text-decoration:none}
 
-    /* ---------- Gallery ---------- */
-    .gallery {
-      display: grid;
-      gap: 0.85rem;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      margin-top: 0.8rem;
+    /* ---------- Courses ---------- */
+    .course-grid{grid-template-columns:repeat(2, minmax(0,1fr))}
+    @media (max-width:800px){ .course-grid{grid-template-columns:1fr} }
+    .course-card{
+      background:rgba(17,24,39,0.55);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:1rem;
     }
-    @media (max-width: 980px) { .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-    @media (max-width: 520px) { .gallery { grid-template-columns: 1fr; } }
-
-    .tile {
-      background: rgba(17,24,39,0.55);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 0.55rem;
-    }
-    .tile img, .tile video {
-      width: 100%;
-      aspect-ratio: 16/9;
-      border-radius: 12px;
-      object-fit: cover;
-      display: block;
-      border: 1px solid rgba(226,232,240,0.08);
-      background: rgba(226,232,240,0.04);
-    }
-    .cap { font-size: 0.78rem; color: var(--muted); margin: 0.45rem 0 0.15rem; }
+    .course-card h3{margin:0 0 0.25rem; font-size:1rem}
+    .course-card .meta{color:var(--muted); font-size:0.9rem; margin-bottom:0.55rem}
+    .course-card ul{margin:0; padding-left:1.1rem; color:var(--muted)}
+    .course-card li{margin:0.22rem 0}
 
     /* ---------- Experience ---------- */
-    .timeline { display: grid; gap: 0.8rem; }
-    .role {
-      background: rgba(17,24,39,0.55);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 1rem;
+    .timeline{display:grid; gap:0.8rem}
+    .role{
+      background:rgba(17,24,39,0.55);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:1rem;
     }
-    .role-top {
-      display: flex;
-      justify-content: space-between;
-      gap: 1rem;
-      flex-wrap: wrap;
-      align-items: baseline;
+    .role-top{
+      display:flex; justify-content:space-between;
+      gap:1rem; flex-wrap:wrap; align-items:baseline;
     }
-    .role-title { font-weight: 800; }
-    .role-meta { color: var(--muted); font-size: 0.92rem; white-space: nowrap; }
-    .role ul { margin: 0.35rem 0 0; padding-left: 1.1rem; color: var(--muted); }
-    .role li { margin: 0.25rem 0; }
+    .role-title{font-weight:800}
+    .role-meta{color:var(--muted); font-size:0.92rem; white-space:nowrap}
+    .role ul{margin:0.35rem 0 0; padding-left:1.1rem; color:var(--muted)}
+    .role li{margin:0.25rem 0}
 
     /* ---------- Footer ---------- */
-    footer {
-      margin-top: 2.2rem;
-      padding: 1.75rem 0 2.25rem;
-      font-size: 0.78rem;
-      color: var(--muted);
-      border-top: 1px solid var(--line);
+    footer{
+      margin-top:2.2rem;
+      padding:1.75rem 0 2.25rem;
+      font-size:0.78rem;
+      color:var(--muted);
+      border-top:1px solid var(--line);
     }
   </style>
 </head>
@@ -295,6 +257,7 @@
         <div class="brand"><span class="brand-dot"></span>Harish Geetha Mohan</div>
         <nav>
           <a href="#about">About</a>
+          <a href="#courses">Courses</a>
           <a href="#projects">Projects</a>
           <a href="#experience">Experience</a>
           <a href="#contact">Contact</a>
@@ -310,17 +273,25 @@
       <div class="panel">
         <div class="pill-row">
           <span class="pill">M.S. MEAM @ UPenn</span>
-          <span class="pill">Manufacturing + Robotics</span>
-          <span class="pill">Design → Build → Test</span>
+          <span class="pill">Manufacturing + Robotics Hardware</span>
+          <span class="pill">AI-for-Science (PINNs / Operators)</span>
         </div>
-        <h1>Mechanical Engineer — Manufacturing, Robotics, AI for Science</h1>
+
+        <h1>Mechanical Engineer building real systems and the models behind them</h1>
+
         <p>
-          I’m interested in the intersection of mechanical engineering and AI—using learning-based methods to speed up
-          simulation, process optimization, and manufacturing workflows. Most of my earlier work is hands-on mechanical design and FEA;
-          now I’m layering AI-for-science ideas on top of that.
+          I started with hands-on mechanical design and manufacturing, then moved into AI-for-science to speed up and
+          improve engineering workflows. Today I care about two things: (1) hardware that survives reality, and (2) models
+          that respect physics and hold up when you validate them.
         </p>
+
+        <p style="margin-top:-0.3rem;">
+          Current focus: robotics hardware integration and physics-driven learning for manufacturing processes.
+        </p>
+
         <div class="cta">
-          <a class="btn primary" href="Harish_Resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+          <!-- Put your actual resume filename in your repo (same folder as this html) -->
+          <a class="btn primary" href="Harish_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
           <a class="btn" href="#projects">Projects</a>
           <a class="btn" href="https://github.com/gmharish190403" target="_blank" rel="noopener">GitHub</a>
         </div>
@@ -334,11 +305,18 @@
           <a href="https://gmharish190403.github.io/Harish_GeethaMohan.github.io/" target="_blank" rel="noopener">🌐 Portfolio</a>
         </div>
 
-        <h3 style="margin-top:1rem;">Currently</h3>
+        <h3 style="margin-top:1rem;">Right now</h3>
         <ul>
-          <li>Coaxial UAV motor mount (metal 3D printed)</li>
-          <li>Structural checks + manufacturable CAD</li>
-          <li>Simulation-driven AM optimization</li>
+          <li>Robotics hardware design + integration (UAV coaxial mount)</li>
+          <li>Learning ROS for robotics workflows</li>
+          <li>Physics-informed modeling for additive manufacturing</li>
+        </ul>
+
+        <h3 style="margin-top:1rem;">Core tools</h3>
+        <ul>
+          <li>SolidWorks, Creo, ANSYS, Abaqus</li>
+          <li>Python, PyTorch, JAX, MATLAB, C/C++</li>
+          <li>Linux, Arduino, ATmega32U4</li>
         </ul>
       </div>
     </section>
@@ -347,207 +325,230 @@
     <section id="about">
       <h2>About</h2>
       <p class="sub">
-        I like projects that go model → simulate → build → test. I’ve done that in BAJA (PSI Racing), in additive manufacturing simulations,
-        and now I’m applying the same workflow for UAV hardware and neural-operator style models.
+        I like engineering that is measurable: you design something, analyze it, build it, test it, then iterate.
+        That mindset came from BAJA fabrication, shop-floor exposure in CNC, and research projects where validation matters.
+        Now I’m applying it to robotics hardware and physics-driven ML for manufacturing.
       </p>
+    </section>
+
+    <!-- COURSES -->
+    <section id="courses">
+      <h2>Courses</h2>
+      <p class="sub">
+        Current focus is mechanics + robotics + AI-for-science. Here are the courses shaping what I’m building right now.
+      </p>
+
+      <div class="grid course-grid">
+        <div class="course-card">
+          <h3>Current</h3>
+          <div class="meta">UPenn</div>
+          <ul>
+            <li><b>ENM 5320</b> — AI4Science / Science4AI: Combining Theoretical Mechanics, Numerical Analysis, and Machine Learning</li>
+            <li><b>MEAM 5200</b> — (your course title if you want to add it)</li>
+            <li><b>Introduction to Robotics</b> — Forward/Inverse Kinematics, robot motion basics</li>
+            <li><b>MEAM 5100</b> — Design of Mechatronic Systems</li>
+          </ul>
+        </div>
+
+        <div class="course-card">
+          <h3>Previously</h3>
+          <div class="meta">UPenn + NIT Trichy</div>
+          <ul>
+            <li>Data-Driven Modeling (scientific ML foundations)</li>
+            <li>Materials & Manufacturing for Mechanical Design</li>
+            <li>Product Design</li>
+            <!-- Add any past courses you want highlighted -->
+          </ul>
+        </div>
+      </div>
     </section>
 
     <!-- PROJECTS -->
     <section id="projects">
       <h2>Selected Projects</h2>
       <p class="sub">
-        A few projects that best represent how I work: design decisions backed by analysis, then verified through fabrication and test feedback.
+        Projects that show how I work: analysis-backed decisions, then validation through experiments, simulation benchmarks, or build feedback.
       </p>
 
       <div class="grid projects-grid">
 
-        <!-- PSI Racing -->
+        <!-- Robotics Hardware -->
         <article class="card">
-          <img class="media" src="psi-baja.png" alt="PSI Racing BAJA ATV" loading="lazy"
+          <img class="media" src="motor_mount.png" alt="Coaxial UAV motor mount" loading="lazy"
                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-          <div class="fallback">Image not found: <b>psi-baja.png</b><br>Keep the filename or place the image in the same folder as index.html</div>
+          <div class="fallback">Optional image: <b>motor_mount.png</b></div>
 
-          <div class="project-title">PSI Racing – Suspension & Steering Subsystem</div>
-          <p class="tagline">NIT Trichy • Design, validation, manufacturability & vehicle testing</p>
+          <div class="project-title">Robotics Hardware: Coaxial UAV Motor Mount</div>
+          <p class="tagline">UPenn • Metal AM hardware • Integration + validation planning</p>
 
           <div class="badges">
-            <span class="badge">PTC Creo</span>
-            <span class="badge">ANSYS Workbench</span>
-            <span class="badge">Lotus</span>
-            <span class="badge">MATLAB</span>
+            <span class="badge">Metal AM</span>
+            <span class="badge">Load-path reasoning</span>
+            <span class="badge">Tolerance/fit</span>
+            <span class="badge">CAD + drawings</span>
           </div>
 
-          <p>
-            Designed and validated suspension & steering components for a BAJA ATV with real build constraints in mind,
-            and iterated based on dynamic test feedback.
-          </p>
           <ul class="impact">
-            <li>CAD + assembly release workflow aligned with fabrication and fit-up realities.</li>
-            <li>FEA checks across key load cases; iteration driven by observed failures during testing.</li>
-            <li>Focused on manufacturability (tolerances, fastener access, serviceability).</li>
+            <li><b>Hardware Design:</b> Designed metal 3D-printed motor-mount adapter enabling coaxial conversion.</li>
+            <li><b>Structural Analysis:</b> Defined thrust/torque/vibration load cases and checked stiffness and load paths.</li>
+            <li><b>Validation Plan:</b> Documented fit, alignment, stiffness checks and assembly assumptions for repeatable builds.</li>
           </ul>
         </article>
 
-        <!-- PINN of LMD -->
+        <!-- LMD PINN -->
         <article class="card">
-          <img class="media" src="lmd.png" alt="LMD / PINN thermal modeling" loading="lazy"
+          <img class="media" src="lmd.png" alt="LMD PINN thermal model" loading="lazy"
                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-          <div class="fallback">Optional image: <b>lmd.png</b> (you can keep this missing if you don’t have it)</div>
+          <div class="fallback">Optional image: <b>lmd.png</b></div>
 
-          <div class="project-title">PINN of LMD (Laser Metal Deposition)</div>
-          <p class="tagline">PyTorch • Physics-Informed ML • Additive manufacturing</p>
+          <div class="project-title">Physics-Informed Modeling: LMD Thermal PDEs</div>
+          <p class="tagline">PyTorch • Moving heat source • Validation against FEA/benchmarks</p>
 
           <div class="badges">
-            <span class="badge">PyTorch</span>
-            <span class="badge">Heat Transfer</span>
-            <span class="badge">PDE-constrained learning</span>
+            <span class="badge">PINNs</span>
+            <span class="badge">Heat transfer</span>
+            <span class="badge">Boundary conditions</span>
+            <span class="badge">Abaqus</span>
           </div>
 
-          <p>
-            Built physics-constrained models to predict temperature fields under a moving heat source with realistic boundary losses.
-          </p>
-          <div class="links-row">
-            <a href="https://github.com/gmharish190403/LMD_OPT/tree/main" target="_blank" rel="noopener">Code ↗</a>
-          </div>
+          <ul class="impact">
+            <li><b>PINN Development:</b> Solved transient heat-transfer PDEs for laser metal deposition.</li>
+            <li><b>Heat Source Modeling:</b> Implemented moving volumetric source and temperature-dependent properties.</li>
+            <li><b>Model Validation:</b> Compared predictions to Abaqus FEA and experimental benchmarks; analyzed stability and convergence.</li>
+          </ul>
         </article>
 
-        <!-- MR Clutch -->
+        <!-- PirateNet (JAX) -->
         <article class="card">
-          <img class="media" src="mr-clutch-exploded.png" alt="MR clutch exploded view" loading="lazy"
+          <img class="media" src="piratenet.png" alt="PirateNet / JAX PINN" loading="lazy"
                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-          <div class="fallback">Image not found: <b>mr-clutch-exploded.png</b></div>
+          <div class="fallback">Optional image: <b>piratenet.png</b></div>
 
-          <div class="project-title">Magnetorheological Clutch – Control & Testing</div>
-          <p class="tagline">Western University, Canada • Prototype + instrumentation</p>
+          <div class="project-title">PirateNet: Physics-Informed Thermal Modeling for AM</div>
+          <p class="tagline">JAX • Multiplicative-gated PINN • Training + sampling studies</p>
 
           <div class="badges">
-            <span class="badge">Arduino Mega 2560</span>
-            <span class="badge">Instrumentation</span>
-            <span class="badge">Torque/Speed data</span>
+            <span class="badge">JAX</span>
+            <span class="badge">Causal training</span>
+            <span class="badge">Adaptive weights</span>
+            <span class="badge">Sampling studies</span>
           </div>
 
-          <p>
-            Designed and tested a mini MR clutch with a planetary layout and instrumented it to acquire synchronized torque and speed data.
-          </p>
+          <ul class="impact">
+            <li><b>PINN Architecture:</b> Implemented PirateNet (multiplicative gating) for stable training where standard MLPs diverged.</li>
+            <li><b>Training Strategy:</b> Used adaptive loss weighting and causal temporal training for physically realistic transients.</li>
+            <li><b>Feature/Sampling Study:</b> Found Fourier features can fail for localized Gaussian heat sources; compared uniform vs importance sampling vs residual-adaptive (RAR), with RAR showing no benefit at higher cost.</li>
+            <li><b>Validation:</b> Validated melt-pool depth against NIST AM-Bench LPBF experiments (~11% relative error in conduction-mode regimes).</li>
+          </ul>
         </article>
 
         <!-- WAAM -->
         <article class="card">
-          <img class="media" src="waam.png" alt="WAAM simulation optimization" loading="lazy"
+          <img class="media" src="waam.png" alt="WAAM Simufact" loading="lazy"
                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-          <div class="fallback">Image not found: <b>waam.png</b></div>
+          <div class="fallback">Optional image: <b>waam.png</b></div>
 
-          <div class="project-title">Optimization of Wire Arc Additive Manufacturing</div>
-          <p class="tagline">NIT Trichy • Simufact Welding</p>
+          <div class="project-title">Optimization of WAAM (Simufact)</div>
+          <p class="tagline">NIT Trichy • FEA + meshing • Residual stress + distortion</p>
 
           <div class="badges">
             <span class="badge">Simufact</span>
-            <span class="badge">Residual Stress</span>
+            <span class="badge">Meshing</span>
+            <span class="badge">Residual stress</span>
             <span class="badge">Distortion</span>
           </div>
 
-          <p>
-            Simulated WAAM builds to study distortion/residual stress across beads and tuned parameters for better stability.
-          </p>
+          <ul class="impact">
+            <li><b>FEA & Meshing:</b> Built thermo-mechanical WAAM models including mesh refinement and element selection.</li>
+            <li><b>Process Optimization:</b> Reduced residual stress (~18%) and distortion (~22%) via parameter tuning and sequencing, validated through physical testing.</li>
+          </ul>
         </article>
 
-        <!-- Coaxial UAV Motor Mount -->
+        <!-- MR clutch -->
         <article class="card">
-          <img class="media" src="motor_mount.png" alt="Coaxial UAV Motor Mount CAD" loading="lazy"
+          <img class="media" src="mr-clutch-exploded.png" alt="MR clutch" loading="lazy"
                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-          <div class="fallback">Image not found: <b>motor_mount.png</b></div>
+          <div class="fallback">Optional image: <b>mr-clutch-exploded.png</b></div>
 
-          <div class="project-title">Coaxial UAV Motor Mount (in progress)</div>
-          <p class="tagline">Penn UAV Lab • Metal 3D printed hardware iteration</p>
+          <div class="project-title">Instrumentation: MR Clutch + Test Bench</div>
+          <p class="tagline">Western University • Prototype + sensors + synchronized DAQ</p>
 
           <div class="badges">
-            <span class="badge">CAD</span>
-            <span class="badge">Load-path</span>
-            <span class="badge">Metal AM</span>
+            <span class="badge">Arduino</span>
+            <span class="badge">Torque/Speed</span>
+            <span class="badge">Test bench</span>
           </div>
 
-          <p>
-            Designed a metal 3D-printed motor-mount adapter for a coaxial propulsion configuration,
-            focusing on stiffness, alignment, and fastener access for rapid iteration and lab testing.
-          </p>
+          <ul class="impact">
+            <li><b>Mechanical Design:</b> Mini planetary magnetorheological clutch for controlled torque transmission.</li>
+            <li><b>Experimental Setup:</b> Built test bench with torque/speed/current sensing and synchronized DAQ.</li>
+            <li><b>Data Analysis:</b> Correlated electrical input to mechanical response for validation.</li>
+          </ul>
         </article>
 
-        <!-- PINO for WAAM -->
+        <!-- PSI BAJA -->
         <article class="card">
-          <div class="project-title">PINO for WAAM (in progress)</div>
-          <p class="tagline">Neural operators • AI for science • course/research direction</p>
+          <img class="media" src="psi-baja.png" alt="PSI Racing BAJA" loading="lazy"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="fallback">Optional image: <b>psi-baja.png</b></div>
+
+          <div class="project-title">PSI Racing BAJA: Suspension & Steering (CAD → Build)</div>
+          <p class="tagline">NIT Trichy • Manual fabrication + welding + vehicle testing</p>
 
           <div class="badges">
-            <span class="badge">Neural Operators</span>
-            <span class="badge">Inverse problems</span>
-            <span class="badge">Process optimization</span>
+            <span class="badge">Fabrication</span>
+            <span class="badge">ANSYS</span>
+            <span class="badge">MATLAB</span>
+            <span class="badge">GD&T drawings</span>
           </div>
 
-          <p>
-            Building operator-style models for faster parameter identification and optimization than full simulation loops.
-          </p>
+          <ul class="impact">
+            <li><b>CAD-to-Build:</b> Designed and fabricated suspension/steering systems including cutting, welding, grinding, fit-up.</li>
+            <li><b>Structural Validation:</b> Validated components using ANSYS under static and dynamic load cases.</li>
+            <li><b>Vehicle Testing:</b> Full vehicle-level testing, failure analysis, and iterations using test data + MATLAB.</li>
+            <li><b>Design Optimization:</b> Reduced component mass by 12% while maintaining factor of safety > 1.8.</li>
+          </ul>
         </article>
 
-      </div>
-
-      <h3 style="margin-top:1.7rem; font-size:1.05rem;">Gallery — Simulations, Prototypes & Testing</h3>
-      <div class="gallery">
-        <div class="tile">
-          <img src="psi-fea-chassis.png" alt="BAJA FEA results" loading="lazy">
-          <p class="cap">BAJA chassis/steering FEA — stress distribution for key load cases.</p>
-        </div>
-
-        <div class="tile">
-          <img src="mr-clutch-test.png" alt="MR clutch testing setup" loading="lazy">
-          <p class="cap">MR clutch testing — torque and speed acquisition with embedded sensors.</p>
-        </div>
-
-        <div class="tile">
-          <video src="crash.mp4" controls preload="metadata"></video>
-          <p class="cap">PSI Racing — crash during testing.</p>
-        </div>
-
-        <div class="tile">
-          <img src="drone.png" alt="Penn UAV motor test rig" loading="lazy">
-          <p class="cap">Penn UAV lab — motor/thrust test rig connected to mount work.</p>
-        </div>
       </div>
     </section>
 
     <!-- EXPERIENCE -->
     <section id="experience">
       <h2>Experience</h2>
-      <p class="sub">Key roles that built my design → validation → build mindset.</p>
+      <p class="sub">Roles that built my design → analysis → build → validation loop.</p>
 
       <div class="timeline">
         <div class="role">
           <div class="role-top">
-            <div class="role-title">UPenn UAV Lab — Hardware Design (Research Assistant)</div>
+            <div class="role-title">Research Assistant — Robotics Hardware Design & Integration (UPenn)</div>
             <div class="role-meta">Nov 2025 – Present</div>
           </div>
           <ul>
-            <li>Designing and iterating metal 3D-printed motor-mount hardware for a coaxial conversion.</li>
-            <li>Supporting structural checks and documenting design assumptions for repeatable builds.</li>
+            <li>Metal AM motor-mount hardware for coaxial UAV configuration; CAD + drawings + load cases.</li>
+            <li>Validation planning for fit, alignment, and stiffness; documentation for repeatable builds.</li>
+            <li>Currently learning ROS to support robotics workflows.</li>
           </ul>
         </div>
 
         <div class="role">
           <div class="role-top">
-            <div class="role-title">Finlay CNC Centre — CNC Machining Training</div>
-            <div class="role-meta">Aug 2024 – Oct 2024</div>
+            <div class="role-title">Research Assistant — Image Processing & Deep Learning for Physical Networks (UPenn)</div>
+            <div class="role-meta">Jan 2026 – Present</div>
           </div>
           <ul>
-            <li>Hands-on exposure to milling/turning/drilling workflows and shop-floor DFM tradeoffs.</li>
+            <li>Built CNN-based pipeline to count junction types in desiccation crack networks.</li>
+            <li>Workflow: crack extraction → skeletonization → 5-layer CNN → attention pooling → regression.</li>
           </ul>
         </div>
 
         <div class="role">
           <div class="role-top">
-            <div class="role-title">IIT Madras — Research Intern (MR Damper Valve)</div>
-            <div class="role-meta">May 2022 – Jul 2022</div>
+            <div class="role-title">Trainee — CNC Manufacturing & Quality Exposure (Finlay CNC Centre)</div>
+            <div class="role-meta">Jul 2024 – Feb 2025</div>
           </div>
           <ul>
-            <li>Simulated MR suspension behavior in MATLAB/Simulink; supported optimization using ANSYS magnetostatics.</li>
+            <li>Shop-floor exposure to turning/milling/drilling, inspection routines, and drawing/GD&T interpretation.</li>
           </ul>
         </div>
       </div>
@@ -564,7 +565,7 @@
     </section>
 
     <footer>
-      © 2026 Harish Geetha Mohan — Mechanical Engineering & Applied Mechanics | University of Pennsylvania
+      © 2026 Harish Geetha Mohan — Mechanical Engineering (UPenn) • Manufacturing • Robotics • AI-for-Science
     </footer>
 
   </main>
